@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-parchment: #f6f3f1;
+  --color-lake: #2b59d1;
+  --color-periwinkle: #cfdaf5;
+  --color-sky: #a0b5eb;
+  --color-mint: #a7fccd;
+  --color-coral: #ff9473;
+  --color-gold: #ecda98;
+  --color-off-black: #242424;
+  --color-ink: #000000;
+  --color-graphite: #4e4d4d;
+  --color-smoke: #797776;
+  --color-ash: #cecac8;
+}
+
+@theme inline {
+  --font-serif: var(--font-serif-src), ui-serif, Georgia, "Times New Roman", serif;
+  --font-mono: var(--font-mono-src), ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-parchment font-mono text-off-black antialiased;
+  }
+
+  ::selection {
+    @apply bg-periwinkle;
+  }
+}
