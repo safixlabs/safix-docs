@@ -73,10 +73,10 @@ export default function FlowDiagram() {
           </marker>
         </defs>
 
-        <line x1="166" y1="70" x2="274" y2="70" stroke="#cecac8" strokeWidth="1.25" markerEnd="url(#arrow)" />
+        <line x1="182" y1="70" x2="274" y2="70" stroke="#cecac8" strokeWidth="1.25" markerEnd="url(#arrow)" />
         <line x1="446" y1="70" x2="550" y2="70" stroke="#cecac8" strokeWidth="1.25" markerEnd="url(#arrow)" />
         <path
-          d="M290 92 C255 118 205 118 172 94"
+          d="M290 92 C258 118 218 118 190 96"
           fill="none"
           stroke="#cecac8"
           strokeWidth="1.25"
@@ -97,21 +97,24 @@ export default function FlowDiagram() {
           markerEnd="url(#arrow)"
         />
 
-        <EdgeLabel x={220} y={58} text="deposits USDC" />
-        <EdgeLabel x={498} y={58} text="lends USDC" />
-        <EdgeLabel x={231} y={132} text="interest" />
+        <EdgeLabel x={228} y={58} text="deposits USDC" />
+        <EdgeLabel x={498} y={58} text="draws USDC" />
+        <EdgeLabel x={498} y={90} text="one-time fee" />
+        <EdgeLabel x={230} y={130} text="liquidation gains" />
+        <EdgeLabel x={230} y={144} text="and protocol rewards" />
         <EdgeLabel x={608} y={196} text="locks collateral" anchor="start" />
-        <EdgeLabel x={296} y={172} text="secures the loan" anchor="end" />
+        <EdgeLabel x={296} y={172} text="secures the debt" anchor="end" />
 
-        <Node x={26} y={48} w={140} label="Lender" />
-        <Node x={280} y={48} w={160} label="Lending pool" accent />
+        <Node x={12} y={48} w={170} label="Liquidity provider" />
+        <Node x={280} y={48} w={160} label="Stability pool" accent />
         <Node x={556} y={48} w={140} label="Borrower" />
         <Node x={268} y={240} w={184} label="Collateral vault" />
 
-        <EdgeLabel x={360} y={312} text="unlocked when the loan is repaid" />
+        <EdgeLabel x={360} y={312} text="unlocked when the drawn amount is repaid" />
       </svg>
       <figcaption className="mt-4 text-center text-[12px] tracking-[-0.02em] text-smoke">
-        USDC moves through the pool while collateral stays locked until repayment.
+        USDC moves through the pool for fixed one-time fees, never for interest. Collateral stays
+        locked until repayment.
       </figcaption>
     </figure>
   )

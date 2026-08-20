@@ -13,13 +13,14 @@ export default function OverviewPage() {
       <H2>What XYZ does</H2>
       <P>
         Holders of tokenized stocks, bonds, funds, real estate, and commodities lock them as collateral
-        and receive USDC from a shared lending pool. The network verifies everything a lender needs to
-        know about the collateral and the borrower while keeping the underlying data confidential.
+        and draw USDC from a shared pool at zero interest, or fund them through a profit sharing
+        partnership. The network verifies everything a counterparty needs to know about the collateral
+        and the borrower while keeping the underlying data confidential.
       </P>
       <CardGrid>
-        <Card title="Borrow, keep the asset">
-          Access liquidity without selling investments or creating taxable events. Repay the loan and
-          the collateral unlocks.
+        <Card title="Borrow at zero interest">
+          Access liquidity without selling. A fixed one-time fee replaces the interest rate, so debt
+          never grows over time. Repay and the collateral unlocks.
         </Card>
         <Card title="Verify privately">
           Ownership, value, eligibility, and existing debt are confirmed without revealing wallets,
@@ -32,8 +33,9 @@ export default function OverviewPage() {
       </CardGrid>
 
       <Highlight title="In plain words">
-        XYZ allows people to keep their tokenized investments, borrow stablecoins against them, and
-        prove that they qualify, all without revealing their entire financial life to the public.
+        XYZ allows people to keep their tokenized investments, draw stablecoins against them for a
+        single fixed fee or a share of profits, and prove that they qualify, all without revealing
+        their entire financial life to the public.
       </Highlight>
 
       <H2>Why it matters</H2>
@@ -42,14 +44,20 @@ export default function OverviewPage() {
         tokenized real-world assets as things to hold rather than capital to build on. XYZ turns those
         assets into productive, private collateral.
       </P>
-      <p className="mt-6">
+      <div className="mt-6 flex flex-col gap-2.5">
         <Link
           href="/how-it-works/"
           className="text-[15px] tracking-[-0.02em] text-lake transition-colors hover:text-off-black"
         >
           Read how the network works →
         </Link>
-      </p>
+        <Link
+          href="/financing/"
+          className="text-[15px] tracking-[-0.02em] text-lake transition-colors hover:text-off-black"
+        >
+          See the interest-free financing model →
+        </Link>
+      </div>
     </article>
   )
 }

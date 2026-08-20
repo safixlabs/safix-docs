@@ -15,13 +15,14 @@ export default function EconomicsPage() {
       />
 
       <H2>Revenue model</H2>
-      <P>XYZ generates revenue at every point where the network creates value:</P>
+      <P>XYZ charges for events, not for time. Revenue comes from:</P>
       <RowList
         items={[
-          "Loan origination fees",
-          "A percentage of borrower interest",
+          "One-time loan origination fees",
+          "Redemption fees",
           "Private verification fees",
           "Liquidation fees",
+          "A protocol share of partnership profits",
           "RWA issuer integrations",
           "Lending platform integrations",
           "Business subscriptions and API access"
@@ -32,11 +33,11 @@ export default function EconomicsPage() {
       <CardGrid>
         <Card title="Users">
           Access liquidity without selling investments, creating taxable events, or exposing financial
-          information publicly.
+          information publicly. Debt stays fixed from day one.
         </Card>
-        <Card title="Lenders">
-          Earn interest while receiving verified information about collateral value, borrower
-          eligibility, existing debt, and overall loan risk.
+        <Card title="Liquidity providers">
+          Earn liquidation gains, protocol token rewards, and a share of partnership profits, with
+          verified information about collateral quality and overall risk.
         </Card>
         <Card title="RWA platforms">
           Make issued assets more useful by letting holders borrow against them, without building

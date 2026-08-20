@@ -16,8 +16,8 @@ export default function PassportPage() {
 
       <P>
         Instead of revealing an entire portfolio, a user presents proof that they hold enough verified
-        assets and meet the lender's requirements. The passport is issued once and travels with the
-        user.
+        assets and meet the counterparty's requirements. The passport is issued once and travels with
+        the user.
       </P>
 
       <CardGrid>
@@ -26,11 +26,11 @@ export default function PassportPage() {
           address.
         </Card>
         <Card title="Reusable">
-          The same verified proof can be presented to any integrated lender without repeating the
+          The same verified proof can be presented to any integrated platform without repeating the
           verification process.
         </Card>
         <Card title="Minimal">
-          Lenders see that the requirements are met, never the portfolio behind the proof.
+          Counterparties see that the requirements are met, never the portfolio behind the proof.
         </Card>
       </CardGrid>
 

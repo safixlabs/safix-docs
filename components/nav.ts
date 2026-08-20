@@ -10,6 +10,7 @@ export const docPages: DocPage[] = [
   { href: "/", title: "Overview", group: "Introduction" },
   { href: "/problem/", title: "Problem and solution", group: "Introduction" },
   { href: "/how-it-works/", title: "How it works", group: "Protocol" },
+  { href: "/financing/", title: "Financing model", group: "Protocol" },
   { href: "/privacy/", title: "Privacy layer", group: "Protocol" },
   { href: "/passport/", title: "Collateral passport", group: "Protocol" },
   { href: "/economics/", title: "Economics", group: "Network" },

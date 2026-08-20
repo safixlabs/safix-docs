@@ -17,12 +17,14 @@ export default function VisionPage() {
       <H2>Competitive advantage</H2>
       <P>
         Existing platforms usually focus on either RWA lending, institutional privacy, identity
-        verification, or asset tokenization. XYZ combines all four within one network:
+        verification, or asset tokenization. XYZ combines all four within one network and adds a
+        financing model the others do not offer:
       </P>
       <PillRow
         items={[
           "Private collateral verification",
           "Cross-chain financial identity",
+          "Interest-free financing",
           "Lending infrastructure",
           "RWA utility"
         ]}

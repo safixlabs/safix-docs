@@ -31,6 +31,10 @@ export default function ProblemPage() {
         XYZ allows users to lock tokenized stocks, bonds, funds, real estate, commodities, and other
         RWAs as collateral to borrow stablecoins.
       </P>
+      <P>
+        Financing is interest-free by design. Borrowers pay fixed one-time fees, or the pool joins
+        them as a partner and shares profit and loss. Debt never grows with time.
+      </P>
       <P>Before any loan is issued, the platform privately verifies four things about the collateral:</P>
       <RowList
         items={[
