@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import type { ReactNode } from "react"
-import { IBM_Plex_Mono, Source_Serif_4 } from "next/font/google"
+import { Plus_Jakarta_Sans, Source_Serif_4 } from "next/font/google"
 import "./globals.css"
 import Sidebar from "@/components/Sidebar"
 import MobileNav from "@/components/MobileNav"
@@ -12,10 +12,9 @@ const serif = Source_Serif_4({
   variable: "--font-serif-src"
 })
 
-const mono = IBM_Plex_Mono({
+const sans = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-mono-src"
+  variable: "--font-sans-src"
 })
 
 export const metadata: Metadata = {
@@ -29,7 +28,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${serif.variable} ${mono.variable}`}>
+    <html lang="en" className={`${serif.variable} ${sans.variable}`}>
       <body>
         <Sidebar />
         <MobileNav />

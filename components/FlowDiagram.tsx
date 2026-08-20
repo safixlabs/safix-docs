@@ -24,7 +24,7 @@ function Node({ x, y, w, label, accent }: NodeProps) {
         y={y + h / 2 + 4.5}
         textAnchor="middle"
         fill="#242424"
-        className="font-mono text-[13px] tracking-[-0.02em]"
+        className="font-sans text-[13px] tracking-[-0.02em]"
       >
         {label}
       </text>
@@ -44,7 +44,7 @@ function EdgeLabel({
   anchor?: "start" | "middle" | "end"
 }) {
   return (
-    <text x={x} y={y} textAnchor={anchor} fill="#797776" className="font-mono text-[11px] tracking-[-0.02em]">
+    <text x={x} y={y} textAnchor={anchor} fill="#797776" className="font-sans text-[11px] tracking-[-0.02em]">
       {text}
     </text>
   )

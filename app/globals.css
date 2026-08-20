@@ -17,12 +17,12 @@
 
 @theme inline {
   --font-serif: var(--font-serif-src), ui-serif, Georgia, "Times New Roman", serif;
-  --font-mono: var(--font-mono-src), ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --font-sans: var(--font-sans-src), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 @layer base {
   body {
-    @apply bg-parchment font-mono text-off-black antialiased;
+    @apply bg-parchment font-sans text-off-black antialiased;
   }
 
   ::selection {
