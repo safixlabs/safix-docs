@@ -34,7 +34,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <PrevNext />
             <footer className="mt-16 flex items-baseline justify-between border-t border-line pt-6 text-[12px] tracking-[-0.02em] text-haze">
               <span>Safix</span>
-              <span>A Safix project</span>
+              <span>©2026</span>
             </footer>
           </div>
         </main>

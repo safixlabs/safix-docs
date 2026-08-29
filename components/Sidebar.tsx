@@ -45,7 +45,7 @@ export default function Sidebar() {
           ))}
         </nav>
       </div>
-      <p className="mt-12 text-[12px] tracking-[-0.02em] text-haze">A Safix project</p>
+      <p className="mt-12 text-[12px] tracking-[-0.02em] text-haze">©2026 Safix</p>
     </aside>
   )
 }
