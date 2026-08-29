@@ -8,7 +8,7 @@ export default function MobileNav() {
   const pathname = normalizePath(usePathname())
 
   return (
-    <div className="sticky top-0 z-10 border-b border-line bg-carbon md:hidden">
+    <div className="sticky top-0 z-10 border-b border-line bg-carbon/80 backdrop-blur-md md:hidden">
       <div className="flex items-baseline justify-between px-6 pt-5">
         <Link href="/" className="font-sans text-[20px] font-bold tracking-[-0.01em] text-fog">
           Safix<span className="text-mint">.</span>

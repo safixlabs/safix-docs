@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import type { ReactNode } from "react"
 import { DM_Sans } from "next/font/google"
 import "./globals.css"
+import Backdrop from "@/components/Backdrop"
 import Sidebar from "@/components/Sidebar"
 import MobileNav from "@/components/MobileNav"
 import PrevNext from "@/components/PrevNext"
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={sans.variable}>
       <body>
+        <Backdrop />
         <Sidebar />
         <MobileNav />
         <main className="md:pl-[264px]">
