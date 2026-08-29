@@ -11,7 +11,7 @@ export default function MobileNav() {
     <div className="sticky top-0 z-10 border-b border-ash bg-parchment md:hidden">
       <div className="flex items-baseline justify-between px-6 pt-5">
         <Link href="/" className="font-serif text-[22px] tracking-[-0.02em] text-off-black">
-          XYZ
+          Safix
         </Link>
         <span className="text-[11px] tracking-[-0.02em] text-smoke">Documentation</span>
       </div>

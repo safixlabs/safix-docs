@@ -44,7 +44,7 @@ export default function FinancingPage() {
 
       <H2>Profit and loss sharing</H2>
       <P>
-        For financing tied to a business or a productive asset, XYZ replaces the creditor relationship
+        For financing tied to a business or a productive asset, Safix replaces the creditor relationship
         with an investment partnership. The financed party and the pool agree on a profit split before
         any capital moves.
       </P>

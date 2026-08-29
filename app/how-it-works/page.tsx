@@ -45,7 +45,7 @@ export default function HowItWorksPage() {
 
       <H2>Liquidation</H2>
       <P>
-        If the collateral value falls below the required level, XYZ liquidates part of it to protect
+        If the collateral value falls below the required level, Safix liquidates part of it to protect
         the pool. The liquidated collateral flows to the stability pool at a discount and becomes part
         of liquidity provider returns. Partial liquidation restores the position to a healthy ratio
         without closing it.

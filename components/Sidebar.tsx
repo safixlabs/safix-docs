@@ -11,7 +11,7 @@ export default function Sidebar() {
     <aside className="fixed inset-y-0 left-0 hidden w-[264px] flex-col justify-between overflow-y-auto border-r border-ash bg-parchment px-8 py-10 md:flex">
       <div>
         <Link href="/" className="block">
-          <span className="block font-serif text-[28px] leading-none tracking-[-0.02em] text-off-black">XYZ</span>
+          <span className="block font-serif text-[28px] leading-none tracking-[-0.02em] text-off-black">Safix</span>
           <span className="mt-2.5 block text-[12px] leading-snug tracking-[-0.02em] text-smoke">
             Private credit for tokenized assets
           </span>

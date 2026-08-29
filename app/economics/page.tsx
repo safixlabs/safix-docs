@@ -15,7 +15,7 @@ export default function EconomicsPage() {
       />
 
       <H2>Revenue model</H2>
-      <P>XYZ charges for events, not for time. Revenue comes from:</P>
+      <P>Safix charges for events, not for time. Revenue comes from:</P>
       <RowList
         items={[
           "One-time loan origination fees",

@@ -11,7 +11,7 @@ export default function ProblemPage() {
       <DocHeader
         tag="Introduction"
         title="The problem and the solution"
-        lead="Tokenized assets are public by default and financially idle. XYZ addresses both at once."
+        lead="Tokenized assets are public by default and financially idle. Safix addresses both at once."
       />
 
       <H2>The problem</H2>
@@ -28,7 +28,7 @@ export default function ProblemPage() {
 
       <H2>The solution</H2>
       <P>
-        XYZ allows users to lock tokenized stocks, bonds, funds, real estate, commodities, and other
+        Safix allows users to lock tokenized stocks, bonds, funds, real estate, commodities, and other
         RWAs as collateral to borrow stablecoins.
       </P>
       <P>

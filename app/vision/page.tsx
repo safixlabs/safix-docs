@@ -11,13 +11,13 @@ export default function VisionPage() {
       <DocHeader
         tag="Network"
         title="Vision"
-        lead="XYZ aims to become the private credit and collateral layer for onchain finance."
+        lead="Safix aims to become the private credit and collateral layer for onchain finance."
       />
 
       <H2>Competitive advantage</H2>
       <P>
         Existing platforms usually focus on either RWA lending, institutional privacy, identity
-        verification, or asset tokenization. XYZ combines all four within one network and adds a
+        verification, or asset tokenization. Safix combines all four within one network and adds a
         financing model the others do not offer:
       </P>
       <PillRow
@@ -35,7 +35,7 @@ export default function VisionPage() {
         "Can this user safely and legally borrow against these assets?"
       </blockquote>
       <P>
-        Any wallet, lender, RWA platform, or financial application could use XYZ to answer it privately.
+        Any wallet, lender, RWA platform, or financial application could use Safix to answer it privately.
         Whoever answers that question for the whole ecosystem becomes the credit layer beneath it.
       </P>
     </article>

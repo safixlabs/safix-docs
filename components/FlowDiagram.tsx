@@ -56,7 +56,7 @@ export default function FlowDiagram() {
       <svg
         viewBox="0 0 720 330"
         role="img"
-        aria-label="Flow of funds and collateral in the XYZ network"
+        aria-label="Flow of funds and collateral in the Safix network"
         className="h-auto w-full"
       >
         <defs>

@@ -11,7 +11,7 @@ export default function PrivacyPage() {
       <DocHeader
         tag="Protocol"
         title="Privacy layer"
-        lead="XYZ verifies important financial facts without exposing the underlying data publicly."
+        lead="Safix verifies important financial facts without exposing the underlying data publicly."
       />
 
       <H2>What the network can confirm</H2>

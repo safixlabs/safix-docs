@@ -7,10 +7,10 @@ export default function OverviewPage() {
       <DocHeader
         tag="Introduction"
         title="Private credit for tokenized assets"
-        lead="XYZ is a private credit network for tokenized stocks and real-world assets. It lets users borrow stablecoins against their investments without selling them or publicly exposing their portfolio."
+        lead="Safix is a private credit network for tokenized stocks and real-world assets. It lets users borrow stablecoins against their investments without selling them or publicly exposing their portfolio."
       />
 
-      <H2>What XYZ does</H2>
+      <H2>What Safix does</H2>
       <P>
         Holders of tokenized stocks, bonds, funds, real estate, and commodities lock them as collateral
         and draw USDC from a shared pool at zero interest, or fund them through a profit sharing
@@ -33,7 +33,7 @@ export default function OverviewPage() {
       </CardGrid>
 
       <Highlight title="In plain words">
-        XYZ allows people to keep their tokenized investments, draw stablecoins against them for a
+        Safix allows people to keep their tokenized investments, draw stablecoins against them for a
         single fixed fee or a share of profits, and prove that they qualify, all without revealing
         their entire financial life to the public.
       </Highlight>
@@ -41,7 +41,7 @@ export default function OverviewPage() {
       <H2>Why it matters</H2>
       <P>
         Onchain finance makes ownership programmable but also makes it public, and it still treats
-        tokenized real-world assets as things to hold rather than capital to build on. XYZ turns those
+        tokenized real-world assets as things to hold rather than capital to build on. Safix turns those
         assets into productive, private collateral.
       </P>
       <div className="mt-6 flex flex-col gap-2.5">
