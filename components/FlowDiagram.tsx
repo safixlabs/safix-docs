@@ -16,14 +16,14 @@ function Node({ x, y, w, label, accent }: NodeProps) {
         width={w}
         height={h}
         rx={h / 2}
-        fill={accent ? "#cfdaf5" : "#f6f3f1"}
-        stroke="#cecac8"
+        fill={accent ? "#02252b" : "#0d1615"}
+        stroke="#2b3d39"
       />
       <text
         x={x + w / 2}
         y={y + h / 2 + 4.5}
         textAnchor="middle"
-        fill="#242424"
+        fill="#e9f2ee"
         className="font-sans text-[13px] tracking-[-0.02em]"
       >
         {label}
@@ -44,7 +44,7 @@ function EdgeLabel({
   anchor?: "start" | "middle" | "end"
 }) {
   return (
-    <text x={x} y={y} textAnchor={anchor} fill="#797776" className="font-sans text-[11px] tracking-[-0.02em]">
+    <text x={x} y={y} textAnchor={anchor} fill="#8ea09a" className="font-sans text-[11px] tracking-[-0.02em]">
       {text}
     </text>
   )
@@ -52,7 +52,7 @@ function EdgeLabel({
 
 export default function FlowDiagram() {
   return (
-    <figure className="mt-10 rounded-[24px] border border-ash p-4 md:p-8">
+    <figure className="mt-10 rounded-[24px] border border-line p-4 md:p-8">
       <svg
         viewBox="0 0 720 330"
         role="img"
@@ -69,30 +69,30 @@ export default function FlowDiagram() {
             markerHeight="6"
             orient="auto-start-reverse"
           >
-            <path d="M0 0 L10 5 L0 10 z" fill="#797776" />
+            <path d="M0 0 L10 5 L0 10 z" fill="#8ea09a" />
           </marker>
         </defs>
 
-        <line x1="182" y1="70" x2="274" y2="70" stroke="#cecac8" strokeWidth="1.25" markerEnd="url(#arrow)" />
-        <line x1="446" y1="70" x2="550" y2="70" stroke="#cecac8" strokeWidth="1.25" markerEnd="url(#arrow)" />
+        <line x1="182" y1="70" x2="274" y2="70" stroke="#2b3d39" strokeWidth="1.25" markerEnd="url(#arrow)" />
+        <line x1="446" y1="70" x2="550" y2="70" stroke="#2b3d39" strokeWidth="1.25" markerEnd="url(#arrow)" />
         <path
           d="M290 92 C258 118 218 118 190 96"
           fill="none"
-          stroke="#cecac8"
+          stroke="#2b3d39"
           strokeWidth="1.25"
           markerEnd="url(#arrow)"
         />
         <path
           d="M614 96 C606 190 540 262 460 262"
           fill="none"
-          stroke="#cecac8"
+          stroke="#2b3d39"
           strokeWidth="1.25"
           markerEnd="url(#arrow)"
         />
         <path
           d="M322 236 C300 186 316 130 348 98"
           fill="none"
-          stroke="#cecac8"
+          stroke="#2b3d39"
           strokeWidth="1.25"
           markerEnd="url(#arrow)"
         />
@@ -112,7 +112,7 @@ export default function FlowDiagram() {
 
         <EdgeLabel x={360} y={312} text="unlocked when the drawn amount is repaid" />
       </svg>
-      <figcaption className="mt-4 text-center text-[12px] tracking-[-0.02em] text-smoke">
+      <figcaption className="mt-4 text-center text-[12px] tracking-[-0.02em] text-haze">
         USDC moves through the pool for fixed one-time fees, never for interest. Collateral stays
         locked until repayment.
       </figcaption>

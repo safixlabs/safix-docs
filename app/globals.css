@@ -1,31 +1,27 @@
 @import "tailwindcss";
 
 @theme {
-  --color-parchment: #f6f3f1;
-  --color-lake: #2b59d1;
-  --color-periwinkle: #cfdaf5;
-  --color-sky: #a0b5eb;
-  --color-mint: #a7fccd;
-  --color-coral: #ff9473;
-  --color-gold: #ecda98;
-  --color-off-black: #242424;
-  --color-ink: #000000;
-  --color-graphite: #4e4d4d;
-  --color-smoke: #797776;
-  --color-ash: #cecac8;
+  --color-carbon: #070c0c;
+  --color-panel: #0d1615;
+  --color-teal-deep: #02252b;
+  --color-mint: #10e7c0;
+  --color-mint-bright: #6bf2da;
+  --color-fog: #e9f2ee;
+  --color-mist: #c0cdc8;
+  --color-haze: #8ea09a;
+  --color-line: #1d2b28;
 }
 
 @theme inline {
-  --font-serif: var(--font-serif-src), ui-serif, Georgia, "Times New Roman", serif;
   --font-sans: var(--font-sans-src), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 @layer base {
   body {
-    @apply bg-parchment font-sans text-off-black antialiased;
+    @apply bg-carbon font-sans text-fog antialiased;
   }
 
   ::selection {
-    @apply bg-periwinkle;
+    @apply bg-mint/25;
   }
 }

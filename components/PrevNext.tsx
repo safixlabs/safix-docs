@@ -14,11 +14,11 @@ export default function PrevNext() {
   const next = docPages[index + 1]
 
   return (
-    <nav className="mt-20 flex items-baseline justify-between gap-4 border-t border-ash pt-8">
+    <nav className="mt-20 flex items-baseline justify-between gap-4 border-t border-line pt-8">
       {prev ? (
         <Link
           href={prev.href}
-          className="text-[14px] tracking-[-0.02em] text-graphite transition-colors hover:text-lake"
+          className="text-[14px] tracking-[-0.02em] text-mist transition-colors hover:text-mint"
         >
           ← {prev.title}
         </Link>
@@ -28,7 +28,7 @@ export default function PrevNext() {
       {next ? (
         <Link
           href={next.href}
-          className="text-right text-[14px] tracking-[-0.02em] text-graphite transition-colors hover:text-lake"
+          className="text-right text-[14px] tracking-[-0.02em] text-mist transition-colors hover:text-mint"
         >
           {next.title} →
         </Link>

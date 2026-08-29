@@ -31,7 +31,7 @@ export default function VisionPage() {
       />
 
       <H2>The question the network answers</H2>
-      <blockquote className="mt-8 border-l-2 border-lake pl-6 font-serif text-[24px] italic leading-[1.35] tracking-[-0.02em] text-off-black md:text-[26px]">
+      <blockquote className="mt-8 border-l-2 border-mint pl-6 font-sans text-[24px] font-semibold leading-[1.35] tracking-[-0.02em] text-fog md:text-[26px]">
         "Can this user safely and legally borrow against these assets?"
       </blockquote>
       <P>

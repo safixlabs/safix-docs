@@ -37,7 +37,7 @@ export default function HowItWorksPage() {
         For financing tied to a business or a productive asset, the pool can act as a partner instead
         of a creditor. Profit is shared at a pre-agreed ratio and genuine losses fall on the capital.
         The full structure is described in the{" "}
-        <Link href="/financing/" className="text-lake transition-colors hover:text-off-black">
+        <Link href="/financing/" className="text-mint transition-colors hover:text-fog">
           financing model
         </Link>
         .

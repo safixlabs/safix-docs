@@ -47,13 +47,13 @@ export default function OverviewPage() {
       <div className="mt-6 flex flex-col gap-2.5">
         <Link
           href="/how-it-works/"
-          className="text-[15px] tracking-[-0.02em] text-lake transition-colors hover:text-off-black"
+          className="text-[15px] tracking-[-0.02em] text-mint transition-colors hover:text-fog"
         >
           Read how the network works →
         </Link>
         <Link
           href="/financing/"
-          className="text-[15px] tracking-[-0.02em] text-lake transition-colors hover:text-off-black"
+          className="text-[15px] tracking-[-0.02em] text-mint transition-colors hover:text-fog"
         >
           See the interest-free financing model →
         </Link>
