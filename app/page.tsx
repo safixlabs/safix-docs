@@ -27,7 +27,7 @@ export default function OverviewPage() {
           balances, or identity to the public.
         </Card>
         <Card title="One passport">
-          A reusable private collateral passport carries the proof across wallets, blockchains, and
+          A reusable private credit passport carries the proof across wallets, blockchains, and
           lending platforms.
         </Card>
       </CardGrid>

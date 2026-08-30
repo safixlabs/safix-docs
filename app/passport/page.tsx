@@ -10,7 +10,7 @@ export default function PassportPage() {
     <article>
       <DocHeader
         tag="Protocol"
-        title="Private collateral passport"
+        title="Private credit passport"
         lead="A reusable private proof that works across wallets, blockchains, and lending platforms."
       />
 
