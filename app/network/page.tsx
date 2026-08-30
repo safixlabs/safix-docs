@@ -59,8 +59,8 @@ export default function NetworkPage() {
         </Card>
         <Card title="PartnershipDesk">
           The profit and loss sharing track. Partnerships are funded pro rata, capital moves to the
-          operator on activation, returns are reported onchain, and profit splits at the agreed ratio
-          while genuine losses fall on the capital.
+          operator on activation, returns are reported onchain, settlement can require an independent auditor's approval, and
+          profit splits at the agreed ratio while genuine losses fall on the capital.
         </Card>
         <Card title="PassportRegistry">
           The credit passport anchor. Approved attesters write a five-check bitmask with optional
@@ -78,7 +78,7 @@ export default function NetworkPage() {
 
       <H2>Status</H2>
       <P>
-        All three contracts are implemented and covered by a 30-test Foundry suite, including the
+        All three contracts are implemented and covered by a 35-test Foundry suite with stateful invariants over randomized action sequences, including the
         liquidation loss and gain distribution math, the partnership settlement split, and Chainlink
         feed pricing with staleness guards. An off-chain keeper discovers positions from events,
         pushes prices for assets without a feed, and liquidates unhealthy positions automatically; the
