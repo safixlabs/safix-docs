@@ -35,6 +35,21 @@ export default function NetworkPage() {
         a dedicated provider.
       </P>
 
+      <H2>Real assets on the chain</H2>
+      <P>
+        Robinhood Stock Tokens are standard ERC-20 assets with 18 decimals that can be held or
+        transferred in any compatible wallet; KYB onboarding applies only to the authorized
+        participants who mint and burn. That makes them usable as Safix collateral without issuer
+        permission. Corporate actions arrive through the ERC-8056 scaled amount extension rather than
+        rebasing, and every stock token ships a per-asset Chainlink feed whose price already includes
+        that multiplier. Safix reads those feeds directly.
+      </P>
+      <P>
+        The chain settles around USDG alongside bridged stablecoins. The pool contract takes its
+        stable asset as a constructor parameter, so the deployed pool can denominate in whichever
+        stablecoin has the deepest local liquidity.
+      </P>
+
       <H2>Contract architecture</H2>
       <CardGrid>
         <Card title="SafixPool">
@@ -63,10 +78,12 @@ export default function NetworkPage() {
 
       <H2>Status</H2>
       <P>
-        All three contracts are implemented and covered by a 22-test Foundry suite, including the
-        liquidation loss and gain distribution math and the partnership settlement split. The full
-        lifecycle has been exercised end to end against a local devnet; testnet deployment is the next
-        step, followed by real oracle feeds and issuer integrations.
+        All three contracts are implemented and covered by a 28-test Foundry suite, including the
+        liquidation loss and gain distribution math, the partnership settlement split, and Chainlink
+        feed pricing with staleness guards. An off-chain keeper discovers positions from events,
+        pushes prices for assets without a feed, and liquidates unhealthy positions automatically; the
+        full lifecycle including an automated keeper liquidation has been exercised end to end against
+        a local devnet. Testnet deployment is the next step.
       </P>
     </article>
   )
