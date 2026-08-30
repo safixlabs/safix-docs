@@ -78,7 +78,7 @@ export default function NetworkPage() {
 
       <H2>Status</H2>
       <P>
-        All three contracts are implemented and covered by a 28-test Foundry suite, including the
+        All three contracts are implemented and covered by a 30-test Foundry suite, including the
         liquidation loss and gain distribution math, the partnership settlement split, and Chainlink
         feed pricing with staleness guards. An off-chain keeper discovers positions from events,
         pushes prices for assets without a feed, and liquidates unhealthy positions automatically; the
