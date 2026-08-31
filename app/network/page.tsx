@@ -45,9 +45,10 @@ export default function NetworkPage() {
         that multiplier. Safix reads those feeds directly.
       </P>
       <P>
-        The chain settles around USDG alongside bridged stablecoins. The pool contract takes its
-        stable asset as a constructor parameter, so the deployed pool can denominate in whichever
-        stablecoin has the deepest local liquidity.
+        The chain settles around USDG alongside bridged stablecoins, and an onchain asset registry
+        enumerates every listed stock token. The pool contract takes its stable asset as a constructor
+        parameter, so the deployed pool can denominate in whichever stablecoin has the deepest local
+        liquidity; on mainnet that is USDG at 0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168.
       </P>
 
       <H2>Contract architecture</H2>
@@ -83,7 +84,7 @@ export default function NetworkPage() {
         feed pricing with staleness guards. An off-chain keeper discovers positions from events,
         pushes prices for assets without a feed, and liquidates unhealthy positions automatically; the
         full lifecycle including an automated keeper liquidation has been exercised end to end against
-        a local devnet. Testnet deployment is the next step.
+        a local devnet, and the deploy script has been simulated end to end against the live testnet RPC at about 10.1M gas, roughly 0.0002 ETH. Broadcasting it is the next step.
       </P>
     </article>
   )
