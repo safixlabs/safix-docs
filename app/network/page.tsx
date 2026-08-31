@@ -48,8 +48,18 @@ export default function NetworkPage() {
         The chain settles around USDG alongside bridged stablecoins, and an onchain asset registry
         enumerates every listed stock token. The pool contract takes its stable asset as a constructor
         parameter, so the deployed pool can denominate in whichever stablecoin has the deepest local
-        liquidity; on mainnet that is USDG at 0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168.
+        liquidity; on mainnet that is USDG.
       </P>
+
+      <div className="mt-7 flex items-center gap-4 rounded-[20px] border border-line bg-panel/80 p-5">
+        <img src="/usdg.png" alt="USDG logo" className="h-10 w-10 shrink-0 rounded-full" />
+        <div className="min-w-0">
+          <p className="text-[15px] font-semibold tracking-[-0.01em] text-fog">USDG · Global Dollar</p>
+          <p className="mt-1 break-all text-[12.5px] tracking-[-0.01em] text-haze">
+            Mainnet 0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168
+          </p>
+        </div>
+      </div>
 
       <H2>Contract architecture</H2>
       <CardGrid>
