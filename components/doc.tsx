@@ -1,5 +1,14 @@
 import type { ReactNode } from "react"
 
+export function Usdg() {
+  return (
+    <span className="inline-flex items-center gap-1.5 whitespace-nowrap">
+      <img src="/usdg.png" alt="" className="h-[1.05em] w-[1.05em] shrink-0" />
+      USDG
+    </span>
+  )
+}
+
 export function PillTag({ children }: { children: ReactNode }) {
   return (
     <p className="inline-flex items-center gap-2.5 rounded-[3px] border border-line px-4 py-1.5 text-[12px] tracking-[-0.02em] text-mist">
@@ -39,11 +48,11 @@ export function P({ children }: { children: ReactNode }) {
   )
 }
 
-export function RowList({ items }: { items: string[] }) {
+export function RowList({ items }: { items: ReactNode[] }) {
   return (
     <ol className="mt-8 border-t border-line">
       {items.map((text, index) => (
-        <li key={text} className="flex gap-5 border-b border-line py-4">
+        <li key={index} className="flex gap-5 border-b border-line py-4">
           <span className="w-7 shrink-0 pt-px text-[13px] tracking-[-0.02em] text-haze">
             {String(index + 1).padStart(2, "0")}
           </span>

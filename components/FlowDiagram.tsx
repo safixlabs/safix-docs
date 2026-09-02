@@ -97,8 +97,8 @@ export default function FlowDiagram() {
           markerEnd="url(#arrow)"
         />
 
-        <EdgeLabel x={228} y={58} text="deposits USDC" />
-        <EdgeLabel x={498} y={58} text="draws USDC" />
+        <EdgeLabel x={228} y={58} text="deposits USDG" />
+        <EdgeLabel x={498} y={58} text="draws USDG" />
         <EdgeLabel x={498} y={90} text="one-time fee" />
         <EdgeLabel x={230} y={130} text="liquidation gains" />
         <EdgeLabel x={230} y={144} text="and protocol rewards" />
@@ -113,7 +113,7 @@ export default function FlowDiagram() {
         <EdgeLabel x={360} y={312} text="unlocked when the drawn amount is repaid" />
       </svg>
       <figcaption className="mt-4 text-center text-[12px] tracking-[-0.02em] text-haze">
-        USDC moves through the pool for fixed one-time fees, never for interest. Collateral stays
+        USDG moves through the pool for fixed one-time fees, never for interest. Collateral stays
         locked until repayment.
       </figcaption>
     </figure>

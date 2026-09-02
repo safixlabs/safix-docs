@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Card, CardGrid, DocHeader, H2, P, PillRow } from "@/components/doc"
+import { Card, CardGrid, DocHeader, H2, P, PillRow, Usdg } from "@/components/doc"
 
 export const metadata: Metadata = {
   title: "Network"
@@ -45,10 +45,10 @@ export default function NetworkPage() {
         that multiplier. Safix reads those feeds directly.
       </P>
       <P>
-        The chain settles around USDG alongside bridged stablecoins, and an onchain asset registry
+        The chain settles around <Usdg /> alongside bridged stablecoins, and an onchain asset registry
         enumerates every listed stock token. The pool contract takes its stable asset as a constructor
         parameter, so the deployed pool can denominate in whichever stablecoin has the deepest local
-        liquidity; on mainnet that is USDG.
+        liquidity; on mainnet that is <Usdg />.
       </P>
 
       <div className="mt-7 flex items-center gap-4 rounded-[4px] border border-line bg-panel/80 p-5">
@@ -64,7 +64,7 @@ export default function NetworkPage() {
       <H2>Contract architecture</H2>
       <CardGrid>
         <Card title="SafixPool">
-          The core. A USDG stability pool with Liquity-style accounting, per-asset collateral
+          The core. A <Usdg /> stability pool with Liquity-style accounting, per-asset collateral
           configuration, one-time fees, partial liquidation with a keeper incentive, and an optional
           passport gate on every draw.
         </Card>
