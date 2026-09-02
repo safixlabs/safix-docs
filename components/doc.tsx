@@ -2,8 +2,8 @@ import type { ReactNode } from "react"
 
 export function PillTag({ children }: { children: ReactNode }) {
   return (
-    <p className="inline-flex items-center gap-2.5 rounded-full border border-line px-4 py-1.5 text-[12px] tracking-[-0.02em] text-mist">
-      <span className="h-1.5 w-1.5 rounded-full bg-mint" />
+    <p className="inline-flex items-center gap-2.5 rounded-[3px] border border-line px-4 py-1.5 text-[12px] tracking-[-0.02em] text-mist">
+      <span className="h-1.5 w-1.5 rounded-[3px] bg-mint" />
       {children}
     </p>
   )
@@ -56,7 +56,7 @@ export function RowList({ items }: { items: string[] }) {
 
 export function Card({ title, children }: { title: string; children: ReactNode }) {
   return (
-    <div className="rounded-[24px] border border-line bg-panel p-7">
+    <div className="rounded-[4px] border border-line bg-panel p-7">
       <h3 className="font-sans text-[19px] font-semibold leading-[1.3] tracking-[-0.01em] text-fog">{title}</h3>
       <p className="mt-3 text-[14px] leading-[1.6] tracking-[-0.02em] text-mist">{children}</p>
     </div>
@@ -69,7 +69,7 @@ export function CardGrid({ children }: { children: ReactNode }) {
 
 export function Highlight({ title, children }: { title: string; children: ReactNode }) {
   return (
-    <div className="mt-16 rounded-[32px] bg-teal-deep p-8 md:p-10">
+    <div className="mt-16 rounded-[4px] bg-teal-deep p-8 md:p-10">
       <h2 className="font-sans text-[24px] font-bold leading-[1.2] tracking-[-0.015em] text-mint md:text-[26px]">
         {title}
       </h2>
@@ -86,7 +86,7 @@ export function PillRow({ items }: { items: string[] }) {
       {items.map(item => (
         <span
           key={item}
-          className="rounded-full border border-line bg-panel px-4 py-2 text-[13px] tracking-[-0.02em] text-fog"
+          className="rounded-[3px] border border-line bg-panel px-4 py-2 text-[13px] tracking-[-0.02em] text-fog"
         >
           {item}
         </span>

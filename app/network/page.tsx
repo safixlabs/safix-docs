@@ -51,8 +51,8 @@ export default function NetworkPage() {
         liquidity; on mainnet that is USDG.
       </P>
 
-      <div className="mt-7 flex items-center gap-4 rounded-[20px] border border-line bg-panel/80 p-5">
-        <img src="/usdg.png" alt="USDG logo" className="h-10 w-10 shrink-0 rounded-full" />
+      <div className="mt-7 flex items-center gap-4 rounded-[4px] border border-line bg-panel/80 p-5">
+        <img src="/usdg.png" alt="USDG logo" className="h-10 w-10 shrink-0 rounded-[3px]" />
         <div className="min-w-0">
           <p className="text-[15px] font-semibold tracking-[-0.01em] text-fog">USDG · Global Dollar</p>
           <p className="mt-1 break-all text-[12.5px] tracking-[-0.01em] text-haze">
@@ -64,7 +64,7 @@ export default function NetworkPage() {
       <H2>Contract architecture</H2>
       <CardGrid>
         <Card title="SafixPool">
-          The core. A USDC stability pool with Liquity-style accounting, per-asset collateral
+          The core. A USDG stability pool with Liquity-style accounting, per-asset collateral
           configuration, one-time fees, partial liquidation with a keeper incentive, and an optional
           passport gate on every draw.
         </Card>

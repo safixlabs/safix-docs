@@ -52,7 +52,7 @@ function EdgeLabel({
 
 export default function FlowDiagram() {
   return (
-    <figure className="mt-10 rounded-[24px] border border-line p-4 md:p-8">
+    <figure className="mt-10 rounded-[4px] border border-line p-4 md:p-8">
       <svg
         viewBox="0 0 720 330"
         role="img"

@@ -13,7 +13,7 @@ export default function OverviewPage() {
       <H2>What Safix does</H2>
       <P>
         Holders of tokenized stocks, bonds, funds, real estate, and commodities lock them as collateral
-        and draw USDC from a shared pool at zero interest, or fund them through a profit sharing
+        and draw USDG from a shared pool at zero interest, or fund them through a profit sharing
         partnership. The network verifies everything a counterparty needs to know about the collateral
         and the borrower while keeping the underlying data confidential.
       </P>

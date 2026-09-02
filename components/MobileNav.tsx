@@ -10,8 +10,9 @@ export default function MobileNav() {
   return (
     <div className="sticky top-0 z-10 border-b border-line bg-carbon/80 backdrop-blur-md md:hidden">
       <div className="flex items-baseline justify-between px-6 pt-5">
-        <Link href="/" className="font-sans text-[20px] font-bold tracking-[-0.01em] text-fog">
-          Safix<span className="text-mint">.</span>
+        <Link href="/" className="flex items-center gap-2">
+          <img src="/logo.png" alt="" className="h-6 w-6" />
+          <span className="font-sans text-[20px] font-bold tracking-[-0.01em] text-fog">Safix</span>
         </Link>
         <span className="text-[11px] tracking-[-0.02em] text-haze">Documentation</span>
       </div>

@@ -20,14 +20,14 @@ export default function HowItWorksPage() {
 
       <H2>Liquidity providers</H2>
       <P>
-        Liquidity providers deposit USDC into the stability pool. They earn no interest by design.
+        Liquidity providers deposit USDG into the stability pool. They earn no interest by design.
         Their return comes from liquidation gains, collateral acquired at a discount when positions are
         liquidated, and from protocol token rewards.
       </P>
 
       <H2>Borrowers</H2>
       <P>
-        Borrowers lock approved tokenized assets as collateral and draw USDC from the pool. Instead of
+        Borrowers lock approved tokenized assets as collateral and draw USDG from the pool. Instead of
         a running interest rate they pay a fixed one-time origination fee, so the debt stays exactly
         the same until it is repaid. Once the drawn amount is returned, the collateral is unlocked.
       </P>
@@ -56,7 +56,7 @@ export default function HowItWorksPage() {
         items={[
           "A borrower locks approved tokenized assets as collateral.",
           "The network privately verifies ownership, value, eligibility, and existing debt.",
-          "USDC is drawn from the stability pool for a fixed one-time origination fee. No interest starts accruing.",
+          "USDG is drawn from the stability pool for a fixed one-time origination fee. No interest starts accruing.",
           "The borrower repays exactly the amount drawn, whenever they choose.",
           "The collateral is unlocked after a fixed redemption fee. If its value drops below the required level before repayment, part of it is liquidated."
         ]}
