@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import ThemeToggle from "./ThemeToggle"
 import { docGroups, docPages, normalizePath } from "./nav"
 
 export default function Sidebar() {
@@ -48,7 +49,10 @@ export default function Sidebar() {
           ))}
         </nav>
       </div>
-      <p className="mt-12 text-[12px] tracking-[-0.02em] text-haze">©2026 Safix</p>
+      <div className="mt-12 flex items-center justify-between gap-3">
+        <p className="text-[12px] tracking-[-0.02em] text-haze">©2026 Safix</p>
+        <ThemeToggle />
+      </div>
     </aside>
   )
 }

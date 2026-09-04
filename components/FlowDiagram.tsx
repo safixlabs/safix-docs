@@ -16,15 +16,13 @@ function Node({ x, y, w, label, accent }: NodeProps) {
         width={w}
         height={h}
         rx={h / 2}
-        fill={accent ? "#02252b" : "#0d1615"}
-        stroke="#2b3d39"
+        className={accent ? "fill-teal-deep stroke-line" : "fill-panel stroke-line"}
       />
       <text
         x={x + w / 2}
         y={y + h / 2 + 4.5}
         textAnchor="middle"
-        fill="#e9f2ee"
-        className="font-sans text-[13px] tracking-[-0.02em]"
+        className="fill-fog font-sans text-[13px] tracking-[-0.02em]"
       >
         {label}
       </text>
@@ -44,7 +42,7 @@ function EdgeLabel({
   anchor?: "start" | "middle" | "end"
 }) {
   return (
-    <text x={x} y={y} textAnchor={anchor} fill="#8ea09a" className="font-sans text-[11px] tracking-[-0.02em]">
+    <text x={x} y={y} textAnchor={anchor} className="fill-haze font-sans text-[11px] tracking-[-0.02em]">
       {text}
     </text>
   )
@@ -69,30 +67,30 @@ export default function FlowDiagram() {
             markerHeight="6"
             orient="auto-start-reverse"
           >
-            <path d="M0 0 L10 5 L0 10 z" fill="#8ea09a" />
+            <path d="M0 0 L10 5 L0 10 z" className="fill-haze" />
           </marker>
         </defs>
 
-        <line x1="182" y1="70" x2="274" y2="70" stroke="#2b3d39" strokeWidth="1.25" markerEnd="url(#arrow)" />
-        <line x1="446" y1="70" x2="550" y2="70" stroke="#2b3d39" strokeWidth="1.25" markerEnd="url(#arrow)" />
+        <line x1="182" y1="70" x2="274" y2="70" className="stroke-line" strokeWidth="1.25" markerEnd="url(#arrow)" />
+        <line x1="446" y1="70" x2="550" y2="70" className="stroke-line" strokeWidth="1.25" markerEnd="url(#arrow)" />
         <path
           d="M290 92 C258 118 218 118 190 96"
           fill="none"
-          stroke="#2b3d39"
+          className="stroke-line"
           strokeWidth="1.25"
           markerEnd="url(#arrow)"
         />
         <path
           d="M614 96 C606 190 540 262 460 262"
           fill="none"
-          stroke="#2b3d39"
+          className="stroke-line"
           strokeWidth="1.25"
           markerEnd="url(#arrow)"
         />
         <path
           d="M322 236 C300 186 316 130 348 98"
           fill="none"
-          stroke="#2b3d39"
+          className="stroke-line"
           strokeWidth="1.25"
           markerEnd="url(#arrow)"
         />

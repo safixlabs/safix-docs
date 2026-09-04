@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import ThemeToggle from "./ThemeToggle"
 import { docPages, normalizePath } from "./nav"
 
 export default function MobileNav() {
@@ -14,7 +15,10 @@ export default function MobileNav() {
           <img src="/logo.png" alt="" className="h-6 w-6" />
           <span className="font-sans text-[20px] font-bold tracking-[-0.01em] text-fog">Safix</span>
         </Link>
-        <span className="text-[11px] tracking-[-0.02em] text-haze">Documentation</span>
+        <div className="flex items-center gap-3">
+          <span className="text-[11px] tracking-[-0.02em] text-haze">Documentation</span>
+          <ThemeToggle />
+        </div>
       </div>
       <nav className="flex gap-5 overflow-x-auto px-6 pb-4 pt-3 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         {docPages.map(page => {
