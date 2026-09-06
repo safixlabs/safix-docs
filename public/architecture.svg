@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" font-family="'DM Sans', ui-sans-serif, system-ui, sans-serif">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap');
+    .t { fill: #e9f2ee }
+    .b { fill: #c0cdc8 }
+    .m { fill: #8ea09a }
+    .a { fill: #10e7c0 }
+    .box { fill: #0d1615; stroke: #1d2b28; stroke-width: 1 }
+    .core { fill: #0d1615; stroke: #10e7c0; stroke-width: 1.5 }
+    .flow { stroke: #10e7c0; stroke-width: 1.6; fill: none }
+    .ret { stroke: #8ea09a; stroke-width: 1.4; fill: none; stroke-dasharray: 7 6 }
+    .ctl { stroke: #728680; stroke-width: 1.2; fill: none; stroke-dasharray: 2 5; stroke-linecap: round }
+    text { font-kerning: normal }
+    .h1 { font-size: 41px; font-weight: 700; letter-spacing: -0.02em }
+    .h2 { font-size: 18px; font-weight: 400; letter-spacing: -0.01em }
+    .name { font-size: 19px; font-weight: 700; letter-spacing: -0.01em }
+    .sub { font-size: 13.5px; font-weight: 400; letter-spacing: -0.01em }
+    .lab { font-size: 13px; font-weight: 500; letter-spacing: -0.01em }
+    .fine { font-size: 12.5px; font-weight: 400 }
+  </style>
+
+  <rect width="1600" height="1000" fill="#070c0c"/>
+
+  <text x="72" y="86" class="h1 t">One stablecoin, three contracts, no interest</text>
+  <text x="72" y="120" class="h2 m">How value moves through Safix</text>
+
+  <text x="72" y="200" class="lab b">Credit here is a fixed obligation, priced once at the moment it is</text>
+  <text x="72" y="226" class="lab b">taken. Partnership capital is the opposite: it shares the outcome,</text>
+  <text x="72" y="252" class="lab b">whichever way it goes. The same stablecoin, and the same</text>
+  <text x="72" y="278" class="lab b">passport, sit under both.</text>
+
+  <g transform="translate(1170 56)">
+    <line x1="0" y1="10" x2="34" y2="10" class="flow"/>
+    <text x="46" y="15" class="fine b">Value moves</text>
+    <line x1="0" y1="36" x2="34" y2="36" class="ret"/>
+    <text x="46" y="41" class="fine b">Returns and gains</text>
+    <line x1="0" y1="62" x2="34" y2="62" class="ctl"/>
+    <text x="46" y="67" class="fine b">Permission and prices</text>
+  </g>
+
+  <g>
+    <rect x="600" y="168" width="400" height="72" rx="4" class="box"/>
+    <text x="628" y="199" class="name t">PassportRegistry</text>
+    <text x="628" y="222" class="sub m">Five private checks, attested and expiring</text>
+  </g>
+
+  <g>
+    <rect x="1236" y="168" width="292" height="72" rx="4" class="box"/>
+    <text x="1264" y="199" class="name t">Chainlink feeds</text>
+    <text x="1264" y="222" class="sub m">One per collateral, staleness bounded</text>
+  </g>
+
+  <g>
+    <rect x="600" y="316" width="400" height="238" rx="4" class="core"/>
+    <text x="628" y="352" class="name a">SafixPool</text>
+    <text x="628" y="376" class="sub b">USDG in, collateral locked, debt fixed at draw</text>
+    <line x1="628" y1="400" x2="972" y2="400" stroke="#1d2b28" stroke-width="1"/>
+    <text x="628" y="428" class="lab b">0.5% once, when the credit is drawn</text>
+    <text x="628" y="456" class="lab b">0.3% once, when the position closes</text>
+    <text x="628" y="484" class="lab b">Nothing in between. Debt never grows.</text>
+    <line x1="628" y1="504" x2="972" y2="504" stroke="#1d2b28" stroke-width="1"/>
+    <text x="628" y="532" class="fine m">Deposits absorb liquidated debt and take the collateral</text>
+  </g>
+
+  <g>
+    <rect x="72" y="330" width="292" height="86" rx="4" class="box"/>
+    <text x="100" y="366" class="name t">Liquidity provider</text>
+    <text x="100" y="390" class="sub m">Deposits USDG, withdraws any time</text>
+  </g>
+
+  <g>
+    <rect x="72" y="470" width="292" height="86" rx="4" class="box"/>
+    <text x="100" y="506" class="name t">Keeper</text>
+    <text x="100" y="530" class="sub m">Anyone. Paid 0.5% of what it seizes.</text>
+  </g>
+
+  <g>
+    <rect x="1236" y="330" width="292" height="86" rx="4" class="box"/>
+    <text x="1264" y="366" class="name t">Borrower</text>
+    <text x="1264" y="390" class="sub m">Locks tokenized assets, draws USDG</text>
+  </g>
+
+  <g>
+    <rect x="600" y="662" width="400" height="182" rx="4" class="box"/>
+    <text x="628" y="698" class="name t">PartnershipDesk</text>
+    <text x="628" y="722" class="sub b">Capital funds a venture, not a loan</text>
+    <line x1="628" y1="746" x2="972" y2="746" stroke="#1d2b28" stroke-width="1"/>
+    <text x="628" y="774" class="lab b">Profit splits 60 / 40 by agreement</text>
+    <text x="628" y="802" class="lab b">A genuine loss falls on the capital</text>
+    <text x="628" y="828" class="fine m">Settlement waits for the auditor</text>
+  </g>
+
+  <g>
+    <rect x="72" y="700" width="292" height="86" rx="4" class="box"/>
+    <text x="100" y="736" class="name t">Funder</text>
+    <text x="100" y="760" class="sub m">Takes the venture's risk, not a rate</text>
+  </g>
+
+  <g>
+    <rect x="1236" y="700" width="292" height="86" rx="4" class="box"/>
+    <text x="1264" y="736" class="name t">Operator</text>
+    <text x="1264" y="760" class="sub m">Runs the venture, reports the return</text>
+  </g>
+
+  <path d="M364 359 L594 359" class="flow" marker-end="url(#tipA)"/>
+  <text x="382" y="348" class="lab a">USDG deposit</text>
+
+  <path d="M594 396 L364 396" class="ret" marker-end="url(#tipB)"/>
+  <text x="382" y="418" class="lab m">Seized collateral, share of the pool</text>
+
+  <path d="M364 500 L594 500" class="ctl" marker-end="url(#tipC)"/>
+  <text x="382" y="490" class="lab m">Liquidates what falls through</text>
+
+  <path d="M1230 359 L1006 359" class="flow" marker-end="url(#tipA)"/>
+  <text x="1032" y="348" class="lab a">Collateral locked</text>
+
+  <path d="M1006 396 L1230 396" class="flow" marker-end="url(#tipA)"/>
+  <text x="1032" y="418" class="lab a">USDG drawn, less the 0.5%</text>
+
+  <path d="M800 246 L800 310" class="ctl" marker-end="url(#tipC)"/>
+  <text x="816" y="284" class="lab m">Who may take part</text>
+
+  <path d="M1382 246 L1382 300 Q1382 316 1366 316 L1016 316" class="ctl" marker-end="url(#tipC)"/>
+  <text x="1042" y="304" class="lab m">Prices, with an age limit</text>
+
+  <path d="M364 729 L594 729" class="flow" marker-end="url(#tipA)"/>
+  <text x="382" y="718" class="lab a">USDG committed</text>
+
+  <path d="M594 766 L364 766" class="ret" marker-end="url(#tipB)"/>
+  <text x="382" y="788" class="lab m">Capital back, plus 60% of the profit</text>
+
+  <path d="M1006 729 L1230 729" class="flow" marker-end="url(#tipA)"/>
+  <text x="1032" y="718" class="lab a">Capital deployed</text>
+
+  <path d="M1230 766 L1006 766" class="ret" marker-end="url(#tipB)"/>
+  <text x="1032" y="788" class="lab m">Return reported, 40% kept</text>
+
+  <path d="M800 560 L800 656" class="ctl" marker-end="url(#tipC)"/>
+  <text x="816" y="614" class="lab m">Same passport, same USDG</text>
+
+  <line x1="72" y1="900" x2="1528" y2="900" stroke="#1d2b28" stroke-width="1"/>
+  <text x="72" y="936" class="lab b">Two fees, both fixed and both paid once. No interest accrues on anything here, and nothing compounds while a position is open.</text>
+  <text x="72" y="962" class="fine m">SafixPool · PartnershipDesk · PassportRegistry, on Robinhood Chain. Settlement in USDG.</text>
+
+  <defs>
+    <marker id="tipA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#10e7c0"/>
+    </marker>
+    <marker id="tipB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#8ea09a"/>
+    </marker>
+    <marker id="tipC" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#728680"/>
+    </marker>
+  </defs>
+</svg>
