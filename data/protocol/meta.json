@@ -1,0 +1,91 @@
+{
+  "syncedAt": "2026-09-06T15:19:20.543Z",
+  "protocolRepo": "safixlabs/safix",
+  "protocolCommit": "ef150773ccc9c5f72c328f8ad85ee85e4a2fd032",
+  "appRepo": "safixlabs/safix-app",
+  "appCommit": "3f828353b0ba9e1f884fd8cac6cb525d50f870db",
+  "contracts": [
+    {
+      "name": "SafixPool",
+      "source": "contracts/src/SafixPool.sol",
+      "license": "AGPL-3.0-only",
+      "pragma": "0.8.26",
+      "compiler": "0.8.26+commit.8a97fa7a",
+      "functions": 46,
+      "events": 19
+    },
+    {
+      "name": "PassportRegistry",
+      "source": "contracts/src/PassportRegistry.sol",
+      "license": "AGPL-3.0-only",
+      "pragma": "0.8.26",
+      "compiler": "0.8.26+commit.8a97fa7a",
+      "functions": 10,
+      "events": 4
+    },
+    {
+      "name": "PartnershipDesk",
+      "source": "contracts/src/PartnershipDesk.sol",
+      "license": "AGPL-3.0-only",
+      "pragma": "0.8.26",
+      "compiler": "0.8.26+commit.8a97fa7a",
+      "functions": 22,
+      "events": 11
+    },
+    {
+      "name": "IERC20",
+      "source": "contracts/src/interfaces/IERC20.sol",
+      "license": "AGPL-3.0-only",
+      "pragma": "0.8.26",
+      "compiler": "0.8.26+commit.8a97fa7a",
+      "functions": 7,
+      "events": 0
+    },
+    {
+      "name": "IAggregatorV3",
+      "source": "contracts/src/interfaces/IAggregatorV3.sol",
+      "license": "AGPL-3.0-only",
+      "pragma": "0.8.26",
+      "compiler": "0.8.26+commit.8a97fa7a",
+      "functions": 2,
+      "events": 0
+    }
+  ],
+  "tests": {
+    "total": 35,
+    "invariants": 4,
+    "byFile": [
+      {
+        "file": "ChainlinkPricing.t.sol",
+        "tests": 6,
+        "invariants": 0
+      },
+      {
+        "file": "PartnershipDesk.t.sol",
+        "tests": 6,
+        "invariants": 0
+      },
+      {
+        "file": "PassportRegistry.t.sol",
+        "tests": 5,
+        "invariants": 0
+      },
+      {
+        "file": "PoolInvariants.t.sol",
+        "tests": 4,
+        "invariants": 4
+      },
+      {
+        "file": "SafixPool.t.sol",
+        "tests": 12,
+        "invariants": 0
+      },
+      {
+        "file": "ScaleAccounting.t.sol",
+        "tests": 2,
+        "invariants": 0
+      }
+    ]
+  },
+  "deployedNetworks": []
+}

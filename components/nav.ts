@@ -4,7 +4,7 @@ export type DocPage = {
   group: string
 }
 
-export const docGroups = ["Introduction", "Protocol", "Network"]
+export const docGroups = ["Introduction", "Protocol", "Network", "Build", "Reference"]
 
 export const docPages: DocPage[] = [
   { href: "/", title: "Overview", group: "Introduction" },
@@ -15,7 +15,13 @@ export const docPages: DocPage[] = [
   { href: "/passport/", title: "Credit passport", group: "Protocol" },
   { href: "/network/", title: "Network", group: "Protocol" },
   { href: "/economics/", title: "Economics", group: "Network" },
-  { href: "/vision/", title: "Vision", group: "Network" }
+  { href: "/vision/", title: "Vision", group: "Network" },
+  { href: "/addresses/", title: "Deployed addresses", group: "Build" },
+  { href: "/integration/", title: "Integration guide", group: "Build" },
+  { href: "/parameters/", title: "Parameter reference", group: "Build" },
+  { href: "/keeper/", title: "Running a keeper", group: "Build" },
+  { href: "/risk/", title: "Risk", group: "Reference" },
+  { href: "/faq/", title: "FAQ", group: "Reference" }
 ]
 
 export const normalizePath = (path: string) => path.replace(/\/+$/, "") || "/"

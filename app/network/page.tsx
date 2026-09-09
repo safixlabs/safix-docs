@@ -1,11 +1,14 @@
 import type { Metadata } from "next"
 import { Card, CardGrid, DocHeader, H2, P, PillRow, Usdg } from "@/components/doc"
+import { protocolMeta } from "@/lib/protocol"
 
 export const metadata: Metadata = {
   title: "Network"
 }
 
 export default function NetworkPage() {
+  const meta = protocolMeta()
+
   return (
     <article>
       <DocHeader
@@ -89,7 +92,7 @@ export default function NetworkPage() {
 
       <H2>Status</H2>
       <P>
-        All three contracts are implemented and covered by a 35-test Foundry suite with stateful invariants over randomized action sequences, including the
+        All three contracts are implemented and covered by a {meta.tests.total}-test Foundry suite with {meta.tests.invariants} stateful invariants over randomized action sequences, including the
         liquidation loss and gain distribution math, the partnership settlement split, and Chainlink
         feed pricing with staleness guards. An off-chain keeper discovers positions from events,
         pushes prices for assets without a feed, and liquidates unhealthy positions automatically; the

@@ -1,0 +1,28 @@
+[
+  {
+    "key": "mainnet",
+    "label": "Mainnet",
+    "name": "Robinhood Chain",
+    "testnet": false,
+    "foundryProfile": "robinhood",
+    "chainId": 4663,
+    "rpcUrl": "https://rpc.mainnet.chain.robinhood.com",
+    "explorer": {
+      "name": "Blockscout",
+      "url": "https://robinhoodchain.blockscout.com"
+    }
+  },
+  {
+    "key": "testnet",
+    "label": "Testnet",
+    "name": "Robinhood Chain Testnet",
+    "testnet": true,
+    "foundryProfile": "robinhood_testnet",
+    "chainId": 46630,
+    "rpcUrl": "https://rpc.testnet.chain.robinhood.com",
+    "explorer": {
+      "name": "Blockscout",
+      "url": "https://explorer.testnet.chain.robinhood.com"
+    }
+  }
+]

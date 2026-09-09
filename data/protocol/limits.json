@@ -1,0 +1,18 @@
+{
+  "bps": 10000,
+  "pPrecision": "1000000000000000000000000000",
+  "scaleFactor": "1000000000",
+  "defaults": {
+    "originationFeeBps": 50,
+    "redemptionFeeBps": 30,
+    "liquidationIncentiveBps": 50
+  },
+  "maxOriginationFeeBps": 500,
+  "maxRedemptionFeeBps": 500,
+  "maxLiquidationIncentiveBps": 200,
+  "maxPriceFeedDecimals": 18,
+  "passport": {
+    "fullMask": 31,
+    "checks": 5
+  }
+}

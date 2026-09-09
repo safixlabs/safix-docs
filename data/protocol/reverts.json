@@ -1,0 +1,304 @@
+{
+  "SafixPool": [
+    {
+      "scope": "onlyOwner modifier",
+      "message": "not owner"
+    },
+    {
+      "scope": "nonReentrant modifier",
+      "message": "reentrancy"
+    },
+    {
+      "scope": "setOwner",
+      "message": "zero owner"
+    },
+    {
+      "scope": "setFees",
+      "message": "fee too high"
+    },
+    {
+      "scope": "setLiquidationIncentive",
+      "message": "too high"
+    },
+    {
+      "scope": "configureAsset",
+      "message": "bad config"
+    },
+    {
+      "scope": "setPrice",
+      "message": "not price updater"
+    },
+    {
+      "scope": "setPrice",
+      "message": "asset off"
+    },
+    {
+      "scope": "setPriceFeed",
+      "message": "asset off"
+    },
+    {
+      "scope": "setPriceFeed",
+      "message": "bad feed decimals"
+    },
+    {
+      "scope": "currentPrice",
+      "message": "bad feed answer"
+    },
+    {
+      "scope": "currentPrice",
+      "message": "bad feed round"
+    },
+    {
+      "scope": "_requireFreshPrice",
+      "message": "stale price"
+    },
+    {
+      "scope": "collectProtocolFees",
+      "message": "transfer failed"
+    },
+    {
+      "scope": "deposit",
+      "message": "zero"
+    },
+    {
+      "scope": "deposit",
+      "message": "transfer failed"
+    },
+    {
+      "scope": "withdraw",
+      "message": "bad amount"
+    },
+    {
+      "scope": "withdraw",
+      "message": "illiquid"
+    },
+    {
+      "scope": "withdraw",
+      "message": "transfer failed"
+    },
+    {
+      "scope": "claimGains",
+      "message": "transfer failed"
+    },
+    {
+      "scope": "lockCollateral",
+      "message": "asset off"
+    },
+    {
+      "scope": "lockCollateral",
+      "message": "zero"
+    },
+    {
+      "scope": "lockCollateral",
+      "message": "transfer failed"
+    },
+    {
+      "scope": "withdrawCollateral",
+      "message": "bad amount"
+    },
+    {
+      "scope": "withdrawCollateral",
+      "message": "close position instead"
+    },
+    {
+      "scope": "withdrawCollateral",
+      "message": "would break ltv"
+    },
+    {
+      "scope": "withdrawCollateral",
+      "message": "transfer failed"
+    },
+    {
+      "scope": "draw",
+      "message": "asset off"
+    },
+    {
+      "scope": "draw",
+      "message": "zero"
+    },
+    {
+      "scope": "draw",
+      "message": "passport required"
+    },
+    {
+      "scope": "draw",
+      "message": "exceeds ltv"
+    },
+    {
+      "scope": "draw",
+      "message": "illiquid"
+    },
+    {
+      "scope": "draw",
+      "message": "transfer failed"
+    },
+    {
+      "scope": "repay",
+      "message": "bad amount"
+    },
+    {
+      "scope": "repay",
+      "message": "transfer failed"
+    },
+    {
+      "scope": "closePosition",
+      "message": "no position"
+    },
+    {
+      "scope": "closePosition",
+      "message": "transfer failed"
+    },
+    {
+      "scope": "liquidate",
+      "message": "healthy"
+    },
+    {
+      "scope": "liquidate",
+      "message": "zero"
+    },
+    {
+      "scope": "liquidate",
+      "message": "pool too small"
+    },
+    {
+      "scope": "liquidate",
+      "message": "transfer failed"
+    }
+  ],
+  "PassportRegistry": [
+    {
+      "scope": "onlyOwner modifier",
+      "message": "not owner"
+    },
+    {
+      "scope": "onlyAttester modifier",
+      "message": "not attester"
+    },
+    {
+      "scope": "setOwner",
+      "message": "zero owner"
+    },
+    {
+      "scope": "attest",
+      "message": "bad mask"
+    }
+  ],
+  "PartnershipDesk": [
+    {
+      "scope": "onlyOwner modifier",
+      "message": "not owner"
+    },
+    {
+      "scope": "nonReentrant modifier",
+      "message": "reentrancy"
+    },
+    {
+      "scope": "setOwner",
+      "message": "zero owner"
+    },
+    {
+      "scope": "approveSettlement",
+      "message": "not auditor"
+    },
+    {
+      "scope": "approveSettlement",
+      "message": "not active"
+    },
+    {
+      "scope": "createPartnership",
+      "message": "no operator"
+    },
+    {
+      "scope": "createPartnership",
+      "message": "bad share"
+    },
+    {
+      "scope": "createPartnership",
+      "message": "no goal"
+    },
+    {
+      "scope": "fund",
+      "message": "not funding"
+    },
+    {
+      "scope": "fund",
+      "message": "past deadline"
+    },
+    {
+      "scope": "fund",
+      "message": "bad amount"
+    },
+    {
+      "scope": "fund",
+      "message": "transfer failed"
+    },
+    {
+      "scope": "activate",
+      "message": "not funding"
+    },
+    {
+      "scope": "activate",
+      "message": "unfunded"
+    },
+    {
+      "scope": "activate",
+      "message": "transfer failed"
+    },
+    {
+      "scope": "cancel",
+      "message": "not funding"
+    },
+    {
+      "scope": "reportReturn",
+      "message": "not active"
+    },
+    {
+      "scope": "reportReturn",
+      "message": "not operator"
+    },
+    {
+      "scope": "reportReturn",
+      "message": "zero"
+    },
+    {
+      "scope": "reportReturn",
+      "message": "transfer failed"
+    },
+    {
+      "scope": "settle",
+      "message": "not active"
+    },
+    {
+      "scope": "settle",
+      "message": "needs audit"
+    },
+    {
+      "scope": "claim",
+      "message": "not claimable"
+    },
+    {
+      "scope": "claim",
+      "message": "nothing to claim"
+    },
+    {
+      "scope": "claim",
+      "message": "transfer failed"
+    },
+    {
+      "scope": "claimOperator",
+      "message": "not settled"
+    },
+    {
+      "scope": "claimOperator",
+      "message": "not operator"
+    },
+    {
+      "scope": "claimOperator",
+      "message": "paid"
+    },
+    {
+      "scope": "claimOperator",
+      "message": "transfer failed"
+    }
+  ]
+}

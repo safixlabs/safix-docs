@@ -4,12 +4,17 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "sync:protocol": "node scripts/sync-protocol.mjs",
+    "sync:chain": "node scripts/snapshot-chain.mjs",
+    "sync": "npm run sync:protocol && npm run sync:chain",
+    "check:generated": "node scripts/check-generated.mjs"
   },
   "dependencies": {
     "next": "^16.0.0",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "viem": "^2.56.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.0",
