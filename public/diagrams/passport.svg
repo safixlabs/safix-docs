@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="'DM Sans', ui-sans-serif, system-ui, sans-serif">
+  <style>
+    .t { fill: #e9f2ee }
+    .b { fill: #c0cdc8 }
+    .m { fill: #8ea09a }
+    .a { fill: #10e7c0 }
+    .box { fill: #0d1615; stroke: #1d2b28; stroke-width: 1 }
+    .core { fill: #0d1615; stroke: #10e7c0; stroke-width: 1.5 }
+    .private { fill: #0d1615; stroke: #1d2b28; stroke-width: 1; stroke-dasharray: 5 5 }
+    .flow { stroke: #10e7c0; stroke-width: 1.6; fill: none }
+    .ctl { stroke: #728680; stroke-width: 1.2; fill: none; stroke-dasharray: 2 5; stroke-linecap: round }
+    .bit { fill: #10e7c0 }
+    .bitoff { fill: #0d1615; stroke: #1d2b28; stroke-width: 1 }
+    text { font-kerning: normal }
+    .h1 { font-size: 41px; font-weight: 700; letter-spacing: -0.02em }
+    .h2 { font-size: 18px; font-weight: 400; letter-spacing: -0.01em }
+    .name { font-size: 19px; font-weight: 700; letter-spacing: -0.01em }
+    .sub { font-size: 13.5px; font-weight: 400; letter-spacing: -0.01em }
+    .lab { font-size: 13px; font-weight: 500; letter-spacing: -0.01em }
+    .fine { font-size: 12.5px; font-weight: 400 }
+    .step { font-size: 12px; font-weight: 700; letter-spacing: 0.14em }
+    .mono { font-size: 14px; font-weight: 500; letter-spacing: 0 }
+  </style>
+
+  <defs>
+    <marker id="p1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#10e7c0"/>
+    </marker>
+    <marker id="p2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#728680"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="#070c0c"/>
+
+  <text x="72" y="86" class="h1 t">Prove you qualify without showing anyone anything</text>
+  <text x="72" y="120" class="h2 m">The credit passport: what goes onchain, and what never does</text>
+
+  <g transform="translate(1206 56)">
+    <line x1="0" y1="10" x2="34" y2="10" class="flow"/>
+    <text x="46" y="15" class="fine b">Onchain</text>
+    <line x1="0" y1="36" x2="34" y2="36" class="ctl"/>
+    <text x="46" y="41" class="fine b">Stays private</text>
+  </g>
+
+  <text x="72" y="196" class="step m">OFF CHAIN, PRIVATE</text>
+  <g>
+    <rect x="72" y="216" width="404" height="330" class="private"/>
+    <text x="104" y="258" class="name t">The attester checks</text>
+    <text x="104" y="296" class="sub b">1 &#160;&#160;Enough approved collateral</text>
+    <text x="104" y="326" class="sub b">2 &#160;&#160;Identity and eligibility</text>
+    <text x="104" y="356" class="sub b">3 &#160;&#160;Existing debt is acceptable</text>
+    <text x="104" y="386" class="sub b">4 &#160;&#160;The collateral is not pledged twice</text>
+    <text x="104" y="416" class="sub b">5 &#160;&#160;Qualifies for the loan requested</text>
+    <text x="104" y="466" class="fine m">Documents, balances and identity are seen here</text>
+    <text x="104" y="488" class="fine m">and go no further. Nothing in this box is written</text>
+    <text x="104" y="510" class="fine m">to a chain, and nothing here is recoverable from</text>
+    <text x="104" y="532" class="fine m">what is.</text>
+  </g>
+
+  <line x1="476" y1="380" x2="556" y2="380" class="flow" marker-end="url(#p1)"/>
+  <text x="470" y="360" class="fine a">attest()</text>
+
+  <text x="560" y="196" class="step a">ONCHAIN</text>
+  <g>
+    <rect x="560" y="216" width="440" height="330" class="core"/>
+    <text x="592" y="258" class="name t">PassportRegistry</text>
+    <text x="592" y="292" class="sub b">All that is written is a bitmask and an</text>
+    <text x="592" y="314" class="sub b">expiry, against an address.</text>
+
+    <g transform="translate(592 342)">
+      <rect x="0" y="0" width="46" height="46" class="bit"/>
+      <rect x="58" y="0" width="46" height="46" class="bit"/>
+      <rect x="116" y="0" width="46" height="46" class="bit"/>
+      <rect x="174" y="0" width="46" height="46" class="bit"/>
+      <rect x="232" y="0" width="46" height="46" class="bit"/>
+    </g>
+    <text x="592" y="418" class="mono a">five checks, all set</text>
+    <text x="592" y="446" class="fine m">plus an expiry, or zero for no expiry</text>
+
+    <text x="592" y="492" class="sub b">An observer learns that some address</text>
+    <text x="592" y="514" class="sub b">passed five checks, and when that lapses.</text>
+  </g>
+
+  <line x1="1000" y1="380" x2="1080" y2="380" class="flow" marker-end="url(#p1)"/>
+  <text x="1004" y="360" class="fine a">isEligible()</text>
+
+  <g>
+    <rect x="1084" y="216" width="444" height="330" class="core"/>
+    <text x="1116" y="258" class="name t">Anyone asking</text>
+    <text x="1116" y="292" class="sub b">The pool asks one question before a draw,</text>
+    <text x="1116" y="314" class="sub b">and any integrated platform can ask the</text>
+    <text x="1116" y="336" class="sub b">same one.</text>
+    <text x="1116" y="382" class="mono a">isEligible(address) &#8594; true</text>
+    <text x="1116" y="424" class="sub b">That is the entire answer. Not a score, not</text>
+    <text x="1116" y="446" class="sub b">a balance, not a name.</text>
+    <text x="1116" y="492" class="fine m">An attester can revoke at any time, and the</text>
+    <text x="1116" y="514" class="fine m">answer turns false on the next block.</text>
+  </g>
+
+  <text x="72" y="614" class="step m">WHAT NEVER LEAVES</text>
+  <g>
+    <rect x="72" y="634" width="700" height="146" class="private"/>
+    <text x="104" y="676" class="name t">Identity &#183; exact holdings &#183; wallet balances &#183; loan details</text>
+    <text x="104" y="712" class="sub b">A counterparty learns the answer to their question and nothing else. There is no</text>
+    <text x="104" y="734" class="sub b">version of this where they see the portfolio and promise not to look.</text>
+    <text x="104" y="762" class="fine m">Holdings disclosed: zero percent.</text>
+  </g>
+
+  <text x="828" y="614" class="step a">WHY IT IS WORTH HAVING ONE</text>
+  <g>
+    <rect x="828" y="634" width="700" height="146" class="box"/>
+    <text x="860" y="676" class="name t">Verified once, presented anywhere</text>
+    <text x="860" y="712" class="sub b">The same proof works across wallets, chains and lending platforms. Every platform</text>
+    <text x="860" y="734" class="sub b">that accepts it makes the next one more likely to, and a borrower never repeats the</text>
+    <text x="860" y="756" class="sub b">verification they have already passed.</text>
+  </g>
+
+  <text x="72" y="852" class="lab m">The registry is a real contract with a real ABI. The mask, the expiry and the eligibility answer are readable by anyone; everything behind them is not.</text>
+</svg>

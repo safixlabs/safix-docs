@@ -19,6 +19,40 @@ npm run build
 
 The static site is written to `out/`.
 
+## Security policy, bug bounty and support
+
+The security policy, the bug bounty and the support path are published from
+[`security.config.json`](security.config.json), the same file in all three Safix
+repositories. `SECURITY.md` is generated from it, and the `/security/` and
+`/support/` pages read it directly, so a timeline or a scope line cannot say one
+thing here and another next door.
+
+```
+npm run build:security   # regenerate SECURITY.md
+npm run check:security   # verify the policy is consistent, and list what is undecided
+```
+
+The generators will not invent a reporting channel or a reward. Where the
+configuration is null the published page says the decision has not been taken,
+because a policy pointing at an address nobody reads is worse than one that admits
+there is none yet. `check:security` names each outstanding decision and runs in CI
+before the build.
+
+## Launch material
+
+[`launch/`](launch) holds what an outsider needs on launch day, ready to publish:
+
+- [`announcement-thread.md`](launch/announcement-thread.md) — eleven posts, with
+  notes on which diagram to attach where.
+- [`announcement-post.md`](launch/announcement-post.md) — the long-form piece the
+  thread links to.
+- [`public-repository-decision.md`](launch/public-repository-decision.md) — the
+  decision record for what opens, under which licence and when. Awaiting sign-off.
+
+The diagram set is in [`public/diagrams/`](public/diagrams): the credit line, the
+liquidation flow and the passport, as SVG with a 1600×900 PNG next to each for
+anywhere that cannot render SVG. The SVGs are the source; the PNGs are rendered
+from them.
 ## Domains and the three surfaces
 
 Safix has three surfaces: the marketing site on the apex domain, the application

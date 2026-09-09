@@ -17,4 +17,5 @@ jobs:
       - run: npm ci
       - run: npm run check:site
       - run: npm run check:generated
+      - run: npm run check:security
       - run: npm run build

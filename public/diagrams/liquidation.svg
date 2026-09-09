@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="'DM Sans', ui-sans-serif, system-ui, sans-serif">
+  <style>
+    .t { fill: #e9f2ee }
+    .b { fill: #c0cdc8 }
+    .m { fill: #8ea09a }
+    .a { fill: #10e7c0 }
+    .w { fill: #f5c451 }
+    .box { fill: #0d1615; stroke: #1d2b28; stroke-width: 1 }
+    .core { fill: #0d1615; stroke: #10e7c0; stroke-width: 1.5 }
+    .warn { fill: #0d1615; stroke: #f5c451; stroke-width: 1.5 }
+    .flow { stroke: #10e7c0; stroke-width: 1.6; fill: none }
+    .ret { stroke: #8ea09a; stroke-width: 1.4; fill: none; stroke-dasharray: 7 6 }
+    .thresh { stroke: #f5c451; stroke-width: 1.4; fill: none; stroke-dasharray: 6 6 }
+    .price { stroke: #c0cdc8; stroke-width: 2; fill: none }
+    .axis { stroke: #1d2b28; stroke-width: 1.2 }
+    text { font-kerning: normal }
+    .h1 { font-size: 41px; font-weight: 700; letter-spacing: -0.02em }
+    .h2 { font-size: 18px; font-weight: 400; letter-spacing: -0.01em }
+    .name { font-size: 19px; font-weight: 700; letter-spacing: -0.01em }
+    .sub { font-size: 13.5px; font-weight: 400; letter-spacing: -0.01em }
+    .lab { font-size: 13px; font-weight: 500; letter-spacing: -0.01em }
+    .fine { font-size: 12.5px; font-weight: 400 }
+    .step { font-size: 12px; font-weight: 700; letter-spacing: 0.14em }
+  </style>
+
+  <defs>
+    <marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#10e7c0"/>
+    </marker>
+    <marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8ea09a"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="#070c0c"/>
+
+  <text x="72" y="86" class="h1 t">Nobody asks permission to liquidate</text>
+  <text x="72" y="120" class="h2 m">What happens when collateral falls below the line, and who is paid for noticing</text>
+
+  <g transform="translate(1150 56)">
+    <line x1="0" y1="10" x2="34" y2="10" class="flow"/>
+    <text x="46" y="15" class="fine b">Collateral moves</text>
+    <line x1="0" y1="36" x2="34" y2="36" class="ret"/>
+    <text x="46" y="41" class="fine b">Debt is cleared</text>
+    <line x1="0" y1="62" x2="34" y2="62" class="thresh"/>
+    <text x="46" y="67" class="fine b">The threshold</text>
+  </g>
+
+  <text x="72" y="196" class="step m">THE TRIGGER</text>
+  <g>
+    <rect x="72" y="216" width="600" height="238" class="box"/>
+    <line x1="120" y1="416" x2="620" y2="416" class="axis"/>
+    <line x1="120" y1="256" x2="120" y2="416" class="axis"/>
+    <path d="M 120 286 C 220 292, 300 300, 380 322 S 500 372, 620 400" class="price"/>
+    <line x1="120" y1="356" x2="620" y2="356" class="thresh"/>
+    <text x="132" y="348" class="fine w">collateral value x liquidation threshold = debt</text>
+    <circle cx="452" cy="356" r="5" fill="#f5c451"/>
+    <text x="330" y="392" class="fine w">below here, anyone may liquidate</text>
+    <text x="132" y="278" class="fine m">collateral value</text>
+  </g>
+  <text x="72" y="486" class="lab b">The pool does not watch prices on a schedule. The condition is a view function,</text>
+  <text x="72" y="508" class="lab b">and it is true or false the moment anybody asks.</text>
+
+  <text x="740" y="196" class="step a">THE CALL</text>
+  <g>
+    <rect x="740" y="216" width="360" height="238" class="core"/>
+    <text x="772" y="262" class="name t">liquidate()</text>
+    <text x="772" y="294" class="sub b">Callable by any funded wallet.</text>
+    <text x="772" y="316" class="sub b">Not a role, not a whitelist, not us.</text>
+    <text x="772" y="352" class="sub b">The caller chooses how much of the</text>
+    <text x="772" y="374" class="sub b">debt to clear. The pool seizes</text>
+    <text x="772" y="396" class="sub b">collateral in the same proportion.</text>
+    <text x="772" y="428" class="fine m">Reverts with "healthy" if the position is fine.</text>
+  </g>
+
+  <line x1="672" y1="335" x2="736" y2="335" class="flow" marker-end="url(#a1)"/>
+  <line x1="1100" y1="292" x2="1180" y2="264" class="flow" marker-end="url(#a1)"/>
+  <line x1="1100" y1="335" x2="1180" y2="410" class="flow" marker-end="url(#a1)"/>
+  <line x1="1100" y1="378" x2="1180" y2="556" class="ret" marker-end="url(#a2)"/>
+
+  <g>
+    <rect x="1184" y="216" width="344" height="104" class="core"/>
+    <text x="1212" y="256" class="name t">The caller</text>
+    <text x="1212" y="286" class="sub b">Keeps the liquidation incentive, a</text>
+    <text x="1212" y="306" class="sub b">share of the collateral seized.</text>
+  </g>
+
+  <g>
+    <rect x="1184" y="360" width="344" height="126" class="core"/>
+    <text x="1212" y="400" class="name t">The stability pool</text>
+    <text x="1212" y="430" class="sub b">Receives the rest of the seized</text>
+    <text x="1212" y="450" class="sub b">collateral. This is where provider</text>
+    <text x="1212" y="470" class="sub b">returns come from.</text>
+  </g>
+
+  <g>
+    <rect x="1184" y="526" width="344" height="104" class="box"/>
+    <text x="1212" y="566" class="name t">Pool deposits</text>
+    <text x="1212" y="596" class="sub b">Fall by the debt that was cleared.</text>
+    <text x="1212" y="616" class="sub b">That is the cost of the gain above.</text>
+  </g>
+
+  <text x="72" y="600" class="step m">WHAT IS LEFT</text>
+  <g>
+    <rect x="72" y="620" width="1028" height="140" class="box"/>
+    <text x="104" y="662" class="name t">The position stays open</text>
+    <text x="104" y="694" class="sub b">Liquidation does not have to close a position. Debt falls by what was cleared, collateral falls in the same proportion, and</text>
+    <text x="104" y="716" class="sub b">what remains can be repaid, topped up, or liquidated again. Nothing is returned afterwards, and repaying later does not</text>
+    <text x="104" y="738" class="sub b">undo it. While the collateral is still worth more than the debt, the borrower gives up more value than the debt it cleared.</text>
+  </g>
+
+  <text x="72" y="828" class="lab m">If the price gaps faster than anyone reacts and the collateral is worth less than the debt, the pool carries the difference.</text>
+  <text x="72" y="852" class="lab m">Current thresholds and the incentive share are published on the parameter reference, read from the deployed contracts.</text>
+</svg>

@@ -5,6 +5,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "build:security": "node scripts/build-security.mjs",
+    "check:security": "node scripts/check-security.mjs",
     "build:og": "node scripts/build-og.mjs",
     "build:icons": "node scripts/build-icons.mjs",
     "build:config": "node scripts/build-vercel-config.mjs",

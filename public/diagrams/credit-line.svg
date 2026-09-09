@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="'DM Sans', ui-sans-serif, system-ui, sans-serif">
+  <style>
+    .t { fill: #e9f2ee }
+    .b { fill: #c0cdc8 }
+    .m { fill: #8ea09a }
+    .a { fill: #10e7c0 }
+    .box { fill: #0d1615; stroke: #1d2b28; stroke-width: 1 }
+    .core { fill: #0d1615; stroke: #10e7c0; stroke-width: 1.5 }
+    .flow { stroke: #10e7c0; stroke-width: 1.6; fill: none }
+    .ret { stroke: #8ea09a; stroke-width: 1.4; fill: none; stroke-dasharray: 7 6 }
+    .axis { stroke: #1d2b28; stroke-width: 1.2 }
+    text { font-kerning: normal }
+    .h1 { font-size: 41px; font-weight: 700; letter-spacing: -0.02em }
+    .h2 { font-size: 18px; font-weight: 400; letter-spacing: -0.01em }
+    .name { font-size: 19px; font-weight: 700; letter-spacing: -0.01em }
+    .sub { font-size: 13.5px; font-weight: 400; letter-spacing: -0.01em }
+    .lab { font-size: 13px; font-weight: 500; letter-spacing: -0.01em }
+    .fine { font-size: 12.5px; font-weight: 400 }
+    .step { font-size: 12px; font-weight: 700; letter-spacing: 0.14em }
+  </style>
+
+  <rect width="1600" height="900" fill="#070c0c"/>
+
+  <text x="72" y="86" class="h1 t">You pay at the door, never for waiting</text>
+  <text x="72" y="120" class="h2 m">The Safix credit line, from locking collateral to getting it back</text>
+
+  <g transform="translate(1206 56)">
+    <line x1="0" y1="10" x2="34" y2="10" class="flow"/>
+    <text x="46" y="15" class="fine b">A step you take</text>
+    <line x1="0" y1="36" x2="34" y2="36" class="ret"/>
+    <text x="46" y="41" class="fine b">What it costs</text>
+  </g>
+
+  <g>
+    <rect x="72" y="200" width="316" height="168" rx="0" class="core"/>
+    <text x="100" y="238" class="step a">01</text>
+    <text x="100" y="272" class="name t">Lock collateral</text>
+    <text x="100" y="302" class="sub b">Approved tokenized assets move</text>
+    <text x="100" y="324" class="sub b">into the pool contract. Nothing is</text>
+    <text x="100" y="346" class="sub b">drawn yet, and nothing is owed.</text>
+  </g>
+  <line x1="388" y1="284" x2="448" y2="284" class="flow" marker-end="url(#arrow)"/>
+
+  <g>
+    <rect x="452" y="200" width="316" height="168" class="core"/>
+    <text x="480" y="238" class="step a">02</text>
+    <text x="480" y="272" class="name t">Draw USDG</text>
+    <text x="480" y="302" class="sub b">A one-time origination fee is added</text>
+    <text x="480" y="324" class="sub b">to the debt, not taken out of the</text>
+    <text x="480" y="346" class="sub b">transfer. That is the whole rate.</text>
+  </g>
+  <line x1="768" y1="284" x2="828" y2="284" class="flow" marker-end="url(#arrow)"/>
+
+  <g>
+    <rect x="832" y="200" width="316" height="168" class="box"/>
+    <text x="860" y="238" class="step m">03</text>
+    <text x="860" y="272" class="name t">Wait as long as you like</text>
+    <text x="860" y="302" class="sub b">Nothing accrues. The debt on day</text>
+    <text x="860" y="324" class="sub b">one thousand is the debt on day</text>
+    <text x="860" y="346" class="sub b">one, to the last unit.</text>
+  </g>
+  <line x1="1148" y1="284" x2="1208" y2="284" class="flow" marker-end="url(#arrow)"/>
+
+  <g>
+    <rect x="1212" y="200" width="316" height="168" class="core"/>
+    <text x="1240" y="238" class="step a">04</text>
+    <text x="1240" y="272" class="name t">Repay and unlock</text>
+    <text x="1240" y="302" class="sub b">Repay what you drew, pay a fixed</text>
+    <text x="1240" y="324" class="sub b">redemption fee, and the collateral</text>
+    <text x="1240" y="346" class="sub b">comes back to you.</text>
+  </g>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#10e7c0"/>
+    </marker>
+    <marker id="arrowm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8ea09a"/>
+    </marker>
+  </defs>
+
+  <text x="72" y="470" class="name t">What you owe, over ten years</text>
+  <text x="72" y="498" class="lab m">Same amount borrowed, same day one. The only difference is what time does to it.</text>
+
+  <line x1="200" y1="790" x2="1460" y2="790" class="axis"/>
+  <line x1="200" y1="560" x2="200" y2="790" class="axis"/>
+  <text x="200" y="820" class="fine m">day one</text>
+  <text x="1400" y="820" class="fine m">year ten</text>
+
+  <path d="M 200 700 L 1460 700" class="flow"/>
+  <text x="1180" y="684" class="lab a">Safix: flat, forever</text>
+
+  <path d="M 200 700 C 500 690, 800 650, 1100 600 S 1360 560, 1460 546" class="ret"/>
+  <text x="1160" y="540" class="lab m">A loan that charges for time</text>
+
+  <circle cx="200" cy="700" r="5" fill="#10e7c0"/>
+  <text x="120" y="706" class="fine b">drawn</text>
+
+  <text x="72" y="866" class="lab m">A borrower who never repays simply never gets the collateral back. It is worth more than the debt, which is what makes the loan safe without a rate.</text>
+</svg>
