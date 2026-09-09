@@ -1,5 +1,11 @@
 import Link from "next/link"
 import { Card, CardGrid, DocHeader, H2, Highlight, P, Usdg } from "@/components/doc"
+import { pageMetadata } from "@/lib/metadata"
+
+export const metadata = pageMetadata(
+  "/",
+  "Safix is a private credit network for tokenized stocks and real-world assets. It lets users borrow stablecoins against their investments without selling them or publicly exposing their portfolio."
+)
 
 export default function OverviewPage() {
   return (

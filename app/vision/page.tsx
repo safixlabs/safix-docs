@@ -1,9 +1,10 @@
-import type { Metadata } from "next"
 import { DocHeader, H2, P, PillRow } from "@/components/doc"
+import { pageMetadata } from "@/lib/metadata"
 
-export const metadata: Metadata = {
-  title: "Vision"
-}
+export const metadata = pageMetadata(
+  "/vision/",
+  "Safix aims to become the private credit and collateral layer for onchain finance."
+)
 
 export default function VisionPage() {
   return (

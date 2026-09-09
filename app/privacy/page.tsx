@@ -1,9 +1,10 @@
-import type { Metadata } from "next"
 import { DocHeader, H2, P, PillRow, RowList } from "@/components/doc"
+import { pageMetadata } from "@/lib/metadata"
 
-export const metadata: Metadata = {
-  title: "Privacy layer"
-}
+export const metadata = pageMetadata(
+  "/privacy/",
+  "Safix verifies important financial facts without exposing the underlying data publicly."
+)
 
 export default function PrivacyPage() {
   return (

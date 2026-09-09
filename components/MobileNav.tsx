@@ -4,9 +4,11 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import ThemeToggle from "./ThemeToggle"
 import { docPages, normalizePath } from "./nav"
+import { surface } from "@/lib/site"
 
 export default function MobileNav() {
   const pathname = normalizePath(usePathname())
+  const app = surface("app")
 
   return (
     <div className="sticky top-0 z-10 border-b border-line bg-carbon/80 backdrop-blur-md md:hidden">
@@ -16,7 +18,16 @@ export default function MobileNav() {
           <span className="font-sans text-[20px] font-bold tracking-[-0.01em] text-fog">Safix</span>
         </Link>
         <div className="flex items-center gap-3">
-          <span className="text-[11px] tracking-[-0.02em] text-haze">Documentation</span>
+          {app.url ? (
+            <a
+              href={app.url}
+              className="text-[11px] tracking-[-0.02em] text-mist transition-colors hover:text-mint"
+            >
+              Open the app →
+            </a>
+          ) : (
+            <span className="text-[11px] tracking-[-0.02em] text-haze">Documentation</span>
+          )}
           <ThemeToggle />
         </div>
       </div>

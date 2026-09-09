@@ -1,9 +1,10 @@
-import type { Metadata } from "next"
 import { Card, CardGrid, DocHeader, H2, P, RowList } from "@/components/doc"
+import { pageMetadata } from "@/lib/metadata"
 
-export const metadata: Metadata = {
-  title: "Financing model"
-}
+export const metadata = pageMetadata(
+  "/financing/",
+  "There is no time-based interest anywhere in the network. Borrowers pay fixed one-time fees, and capital earns from real outcomes instead of the passage of time."
+)
 
 export default function FinancingPage() {
   return (

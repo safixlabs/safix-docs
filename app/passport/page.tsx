@@ -1,9 +1,10 @@
-import type { Metadata } from "next"
 import { Card, CardGrid, DocHeader, H2, P } from "@/components/doc"
+import { pageMetadata } from "@/lib/metadata"
 
-export const metadata: Metadata = {
-  title: "Collateral passport"
-}
+export const metadata = pageMetadata(
+  "/passport/",
+  "A reusable private proof of collateral and eligibility that works across wallets, blockchains, and lending platforms."
+)
 
 export default function PassportPage() {
   return (

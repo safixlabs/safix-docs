@@ -1,11 +1,12 @@
-import type { Metadata } from "next"
 import Link from "next/link"
 import FlowDiagram from "@/components/FlowDiagram"
 import { DocHeader, H2, P, RowList, Usdg } from "@/components/doc"
+import { pageMetadata } from "@/lib/metadata"
 
-export const metadata: Metadata = {
-  title: "How it works"
-}
+export const metadata = pageMetadata(
+  "/how-it-works/",
+  "Liquidity providers fund a stability pool, borrowers draw stablecoins against locked assets at zero interest, and the protocol keeps both sides protected."
+)
 
 export default function HowItWorksPage() {
   return (

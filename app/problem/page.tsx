@@ -1,9 +1,10 @@
-import type { Metadata } from "next"
 import { Card, DocHeader, H2, P, RowList } from "@/components/doc"
+import { pageMetadata } from "@/lib/metadata"
 
-export const metadata: Metadata = {
-  title: "Problem and solution"
-}
+export const metadata = pageMetadata(
+  "/problem/",
+  "Tokenized assets are public by default and financially idle. Safix addresses both at once."
+)
 
 export default function ProblemPage() {
   return (

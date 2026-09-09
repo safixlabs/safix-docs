@@ -1,9 +1,10 @@
-import type { Metadata } from "next"
 import { Card, CardGrid, DocHeader, H2, P, RowList } from "@/components/doc"
+import { pageMetadata } from "@/lib/metadata"
 
-export const metadata: Metadata = {
-  title: "Economics"
-}
+export const metadata = pageMetadata(
+  "/economics/",
+  "How value flows through the Safix network and who benefits from it."
+)
 
 export default function EconomicsPage() {
   return (

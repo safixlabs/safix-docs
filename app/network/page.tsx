@@ -1,10 +1,11 @@
-import type { Metadata } from "next"
 import { Card, CardGrid, DocHeader, H2, P, PillRow, Usdg } from "@/components/doc"
+import { pageMetadata } from "@/lib/metadata"
 import { protocolMeta } from "@/lib/protocol"
 
-export const metadata: Metadata = {
-  title: "Network"
-}
+export const metadata = pageMetadata(
+  "/network/",
+  "Safix runs on Robinhood Chain, the Arbitrum Orbit rollup built for tokenized stocks and real-world assets."
+)
 
 export default function NetworkPage() {
   const meta = protocolMeta()
