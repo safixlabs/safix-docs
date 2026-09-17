@@ -1,0 +1,129 @@
+{
+  "network": "testnet",
+  "chainId": 46630,
+  "readAt": "2026-09-17T15:33:40.068Z",
+  "blockNumber": 120843564,
+  "blockTimestamp": 1789659215,
+  "pool": {
+    "address": "0x83feb836aab98eec343690209db227f1b085c283",
+    "owner": "0x9c41EF802D8435CEed762173A167F0696Df319E9",
+    "priceUpdater": "0x5eF717B6b355a10328789c4a2faFB26DCC4671d7",
+    "passportRegistry": null,
+    "passportGate": false,
+    "stable": {
+      "address": "0x9E037Ef20e020A7f3586c9925661e030d97cd2A3",
+      "symbol": "tUSDG",
+      "name": "Safix Test USD",
+      "decimals": 6
+    },
+    "originationFeeBps": 50,
+    "redemptionFeeBps": 30,
+    "liquidationIncentiveBps": 50,
+    "totalDeposits": "249995000000",
+    "availableLiquidity": "249995000000",
+    "protocolFees": "10499999",
+    "productP": "995996015936254980079681274",
+    "currentScale": 0,
+    "assets": [
+      {
+        "address": "0xb89a04C644f6e844Ba81Eddc0De2a803fA737dF0",
+        "symbol": "tBILL",
+        "name": "Tokenized treasury 3M",
+        "decimals": 18,
+        "enabled": true,
+        "maxLtvBps": 8000,
+        "liqThresholdBps": 9000,
+        "storedPriceUsd1e18": "100420000000000000000",
+        "priceFeed": null,
+        "priceFeedDecimals": null,
+        "priceSource": "manual",
+        "feedDescription": null,
+        "currentPriceUsd1e18": "100420000000000000000",
+        "priceUpdatedAt": 1789558468,
+        "maxPriceAgeSeconds": 86400,
+        "maxDeviationBps": 1000,
+        "minPriceUsd1e18": "50000000000000000000",
+        "maxPriceUsd1e18": "150000000000000000000"
+      },
+      {
+        "address": "0x11e7003A43182104672e39A2d4787549119CF62d",
+        "symbol": "bNVDA",
+        "name": "Tokenized Nvidia",
+        "decimals": 18,
+        "enabled": true,
+        "maxLtvBps": 5500,
+        "liqThresholdBps": 7000,
+        "storedPriceUsd1e18": "172350000000000000000",
+        "priceFeed": null,
+        "priceFeedDecimals": null,
+        "priceSource": "manual",
+        "feedDescription": null,
+        "currentPriceUsd1e18": "172350000000000000000",
+        "priceUpdatedAt": 1789557679,
+        "maxPriceAgeSeconds": 3600,
+        "maxDeviationBps": 2000,
+        "minPriceUsd1e18": "10000000000000000000",
+        "maxPriceUsd1e18": "1000000000000000000000"
+      },
+      {
+        "address": "0x361EDbf3901366aC3E74b2FF2A0EaFBdd6899479",
+        "symbol": "tGOLD",
+        "name": "Tokenized gold",
+        "decimals": 18,
+        "enabled": true,
+        "maxLtvBps": 6500,
+        "liqThresholdBps": 8000,
+        "storedPriceUsd1e18": "3392800000000000000000",
+        "priceFeed": null,
+        "priceFeedDecimals": null,
+        "priceSource": "manual",
+        "feedDescription": null,
+        "currentPriceUsd1e18": "3392800000000000000000",
+        "priceUpdatedAt": 1789557682,
+        "maxPriceAgeSeconds": 86400,
+        "maxDeviationBps": 1500,
+        "minPriceUsd1e18": "1000000000000000000000",
+        "maxPriceUsd1e18": "10000000000000000000000"
+      },
+      {
+        "address": "0x5884aD2f920c162CFBbACc88C9C51AA75eC09E02",
+        "symbol": "AMZN",
+        "name": "Amazon",
+        "decimals": 18,
+        "enabled": true,
+        "maxLtvBps": 5500,
+        "liqThresholdBps": 7000,
+        "storedPriceUsd1e18": "0",
+        "priceFeed": "0x57558663AF6d0212a8E152BdcB78f130aCC6486C",
+        "priceFeedDecimals": 8,
+        "priceSource": "chainlink",
+        "feedDescription": "AMZN / USD",
+        "currentPriceUsd1e18": "245248260000000000000",
+        "priceUpdatedAt": 1780973363,
+        "maxPriceAgeSeconds": 10368000,
+        "maxDeviationBps": 2000,
+        "minPriceUsd1e18": "24525000000000000000",
+        "maxPriceUsd1e18": "465975000000000000000"
+      }
+    ]
+  },
+  "registry": {
+    "address": {
+      "address": "0xca730a1aa0441177f2d68ca1eb24724f204ae76a",
+      "transactionHash": "0xd03b65f9412f23458da46b2a5ba0ae3bdcaf4631c0d9758776d51005e82a3d49",
+      "block": 120348855
+    },
+    "owner": null,
+    "fullMask": 0
+  },
+  "desk": {
+    "address": {
+      "address": "0xd42ddd47de8d2b6a80b095f4ce5cfcfa398b76de",
+      "transactionHash": "0x3730abe9ecd2d0feba56f0d9796f55374fa3b2c0415039f9c4fdbcc0c21745fe",
+      "block": 120348873
+    },
+    "owner": null,
+    "auditor": null,
+    "partnershipCount": 0
+  }
+}

@@ -99,6 +99,11 @@ export type AssetState = {
   feedDescription: string | null
   currentPriceUsd1e18: string | null
   priceUpdatedAt: number | null
+  /** The asset's own price guard. Null on a pool too old to have one. */
+  maxPriceAgeSeconds: number | null
+  maxDeviationBps: number | null
+  minPriceUsd1e18: string | null
+  maxPriceUsd1e18: string | null
 }
 
 export type ChainSnapshot = {
@@ -117,7 +122,6 @@ export type ChainSnapshot = {
     originationFeeBps: number
     redemptionFeeBps: number
     liquidationIncentiveBps: number
-    maxPriceAgeSeconds: number
     totalDeposits: string
     availableLiquidity: string
     protocolFees: string

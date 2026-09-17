@@ -70,11 +70,15 @@ async function tokenMetadata(client, address) {
 }
 
 async function snapshotAsset(client, pool, asset) {
-  const [config, feed, feedDecimals, price] = await Promise.all([
+  const [config, feed, feedDecimals, price, guard] = await Promise.all([
     client.readContract({ address: pool, abi: poolAbi, functionName: "assetConfig", args: [asset] }),
     client.readContract({ address: pool, abi: poolAbi, functionName: "priceFeeds", args: [asset] }),
     client.readContract({ address: pool, abi: poolAbi, functionName: "priceFeedDecimals", args: [asset] }),
-    safeRead(client, { address: pool, abi: poolAbi, functionName: "currentPrice", args: [asset] })
+    safeRead(client, { address: pool, abi: poolAbi, functionName: "currentPrice", args: [asset] }),
+    // The sanity bounds a price is held to. Per asset, because a treasury wrapper
+    // and an equity do not go stale or move at the same rate. An older pool has no
+    // guards at all, and the read fails there rather than answering zero.
+    safeRead(client, { address: pool, abi: poolAbi, functionName: "priceGuards", args: [asset] })
   ])
   const [enabled, maxLtvBps, liqThresholdBps, priceUsd1e18] = config
   const hasFeed = feed !== ZERO_ADDRESS
@@ -92,7 +96,11 @@ async function snapshotAsset(client, pool, asset) {
     priceSource: hasFeed ? "chainlink" : "manual",
     feedDescription,
     currentPriceUsd1e18: price ? price[0].toString() : null,
-    priceUpdatedAt: price ? Number(price[1]) : null
+    priceUpdatedAt: price ? Number(price[1]) : null,
+    maxPriceAgeSeconds: guard ? Number(guard[0]) : null,
+    maxDeviationBps: guard ? Number(guard[1]) : null,
+    minPriceUsd1e18: guard ? guard[2].toString() : null,
+    maxPriceUsd1e18: guard ? guard[3].toString() : null
   }
 }
 
@@ -107,7 +115,6 @@ async function snapshotPool(client, pool) {
     originationFeeBps,
     redemptionFeeBps,
     liquidationIncentiveBps,
-    maxPriceAge,
     totalDeposits,
     availableLiquidity,
     protocolFees,
@@ -122,7 +129,6 @@ async function snapshotPool(client, pool) {
     read("originationFeeBps"),
     read("redemptionFeeBps"),
     read("liquidationIncentiveBps"),
-    read("maxPriceAge"),
     read("totalDeposits"),
     read("availableLiquidity"),
     read("protocolFees"),
@@ -152,7 +158,6 @@ async function snapshotPool(client, pool) {
     originationFeeBps: Number(originationFeeBps),
     redemptionFeeBps: Number(redemptionFeeBps),
     liquidationIncentiveBps: Number(liquidationIncentiveBps),
-    maxPriceAgeSeconds: Number(maxPriceAge),
     totalDeposits: totalDeposits.toString(),
     availableLiquidity: availableLiquidity.toString(),
     protocolFees: protocolFees.toString(),
@@ -169,7 +174,8 @@ async function snapshotNetwork(network) {
     return null
   }
   const deployment = readJson(deploymentPath)
-  const poolAddress = deployment.contracts?.SafixPool
+  const recorded = deployment.contracts?.SafixPool
+  const poolAddress = typeof recorded === "string" ? recorded : recorded?.address
   if (!poolAddress) fail(`deployment record for ${network.key} carries no SafixPool address`)
 
   const rpcUrl = rpcUrlFor(network)

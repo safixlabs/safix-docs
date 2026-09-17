@@ -1,9 +1,9 @@
 {
-  "syncedAt": "2026-09-06T15:19:20.543Z",
+  "syncedAt": "2026-09-17T15:35:26.046Z",
   "protocolRepo": "safixlabs/safix",
-  "protocolCommit": "ef150773ccc9c5f72c328f8ad85ee85e4a2fd032",
+  "protocolCommit": "60ccbf82679af350363168badee737bb6495b70b",
   "appRepo": "safixlabs/safix-app",
-  "appCommit": "3f828353b0ba9e1f884fd8cac6cb525d50f870db",
+  "appCommit": "ac15dd0059002f52818aa18fbbed1873ff977ff1",
   "contracts": [
     {
       "name": "SafixPool",
@@ -11,8 +11,8 @@
       "license": "AGPL-3.0-only",
       "pragma": "0.8.26",
       "compiler": "0.8.26+commit.8a97fa7a",
-      "functions": 46,
-      "events": 19
+      "functions": 82,
+      "events": 31
     },
     {
       "name": "PassportRegistry",
@@ -20,8 +20,8 @@
       "license": "AGPL-3.0-only",
       "pragma": "0.8.26",
       "compiler": "0.8.26+commit.8a97fa7a",
-      "functions": 10,
-      "events": 4
+      "functions": 19,
+      "events": 6
     },
     {
       "name": "PartnershipDesk",
@@ -29,8 +29,8 @@
       "license": "AGPL-3.0-only",
       "pragma": "0.8.26",
       "compiler": "0.8.26+commit.8a97fa7a",
-      "functions": 22,
-      "events": 11
+      "functions": 34,
+      "events": 16
     },
     {
       "name": "IERC20",
@@ -47,17 +47,42 @@
       "license": "AGPL-3.0-only",
       "pragma": "0.8.26",
       "compiler": "0.8.26+commit.8a97fa7a",
-      "functions": 2,
+      "functions": 3,
       "events": 0
     }
   ],
   "tests": {
-    "total": 35,
-    "invariants": 4,
+    "total": 189,
+    "invariants": 7,
     "byFile": [
+      {
+        "file": "BadDebt.t.sol",
+        "tests": 18,
+        "invariants": 0
+      },
       {
         "file": "ChainlinkPricing.t.sol",
         "tests": 6,
+        "invariants": 0
+      },
+      {
+        "file": "EmergencyPause.t.sol",
+        "tests": 17,
+        "invariants": 0
+      },
+      {
+        "file": "FeeBasis.t.sol",
+        "tests": 9,
+        "invariants": 0
+      },
+      {
+        "file": "OracleSafety.t.sol",
+        "tests": 22,
+        "invariants": 0
+      },
+      {
+        "file": "PartnershipDefault.t.sol",
+        "tests": 7,
         "invariants": 0
       },
       {
@@ -66,26 +91,58 @@
         "invariants": 0
       },
       {
+        "file": "PartnershipUnactivated.t.sol",
+        "tests": 7,
+        "invariants": 0
+      },
+      {
+        "file": "PassportOps.t.sol",
+        "tests": 12,
+        "invariants": 0
+      },
+      {
         "file": "PassportRegistry.t.sol",
         "tests": 5,
         "invariants": 0
       },
       {
-        "file": "PoolInvariants.t.sol",
+        "file": "PoolBoundary.t.sol",
         "tests": 4,
-        "invariants": 4
+        "invariants": 0
+      },
+      {
+        "file": "PoolInvariants.t.sol",
+        "tests": 8,
+        "invariants": 7
+      },
+      {
+        "file": "RepayFloor.t.sol",
+        "tests": 8,
+        "invariants": 0
+      },
+      {
+        "file": "RiskCaps.t.sol",
+        "tests": 24,
+        "invariants": 0
       },
       {
         "file": "SafixPool.t.sol",
-        "tests": 12,
+        "tests": 15,
         "invariants": 0
       },
       {
         "file": "ScaleAccounting.t.sol",
         "tests": 2,
         "invariants": 0
+      },
+      {
+        "file": "Timelock.t.sol",
+        "tests": 19,
+        "invariants": 0
       }
     ]
   },
-  "deployedNetworks": []
+  "deployedNetworks": [
+    "testnet"
+  ]
 }

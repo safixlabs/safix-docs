@@ -1,25 +1,47 @@
 {
   "scripts": {
     "scan": "tsx keeper.ts scan",
-    "watch": "tsx keeper.ts watch"
+    "watch": "tsx keeper.ts watch",
+    "drill": "tsx keeper.ts drill",
+    "test": "tsx --test src/*.test.ts"
   },
   "dependencies": {
-    "viem": "^2.38.0"
+    "viem": "^2.38.0",
+    "tsx": "^4.20.0"
   },
   "configFields": [
     "rpcUrl",
     "poolAddress",
     "deployBlock",
     "intervalMs",
-    "prices"
+    "logChunkBlocks",
+    "instanceId",
+    "prices",
+    "alerts",
+    "gas",
+    "indexer"
   ],
   "configExample": {
     "rpcUrl": "https://rpc.testnet.chain.robinhood.com",
     "poolAddress": "0x0000000000000000000000000000000000000000",
     "deployBlock": 0,
     "intervalMs": 15000,
-    "prices": {
-      "0x0000000000000000000000000000000000000000": 100.42
+    "logChunkBlocks": 50000,
+    "instanceId": "keeper-1",
+    "prices": {},
+    "alerts": {
+      "cooldownMs": 900000,
+      "stuckScans": 3
+    },
+    "gas": {
+      "warnLiquidations": 200,
+      "criticalLiquidations": 50,
+      "liquidationGas": 150000
+    },
+    "indexer": {
+      "url": null,
+      "timeoutMs": 3000,
+      "maxLagBlocks": 5000
     }
   },
   "abi": [
@@ -27,8 +49,9 @@
     "function currentPrice(address asset) view returns (uint256 price1e18, uint256 updatedAt)",
     "function isLiquidatable(address borrower, address asset) view returns (bool)",
     "function liquidate(address borrower, address asset, uint256 debtAmount)",
-    "function positions(address borrower, address asset) view returns (uint256 collateral, uint256 debt, uint256 totalDrawn)",
+    "function positions(address borrower, address asset) view returns (uint256 collateral, uint256 debt, uint256 principal)",
+    "function pausedActions() view returns (uint8)",
     "event Drawn(address indexed borrower, address indexed asset, uint256 amount, uint256 fee)"
   ],
-  "defaultIntervalMs": 15000
+  "defaultIntervalMs": 0
 }

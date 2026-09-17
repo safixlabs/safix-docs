@@ -47,11 +47,6 @@ function DeployedParameters({ state }: { state: NetworkState }) {
             <Mono key="c">setLiquidationIncentive</Mono>
           ],
           [
-            "Maximum price age",
-            formatDuration(pool.maxPriceAgeSeconds),
-            <Mono key="d">setMaxPriceAge</Mono>
-          ],
-          [
             "Passport gate on draws",
             pool.passportGate ? "on" : "off",
             <Mono key="e">setPassportRegistry</Mono>
@@ -128,6 +123,29 @@ function DeployedParameters({ state }: { state: NetworkState }) {
         ])}
       />
 
+      <h3 className="mt-10 font-sans text-[19px] font-semibold tracking-[-0.01em] text-fog">
+        Price guards
+      </h3>
+      <P>
+        What each asset&apos;s price is held to before the pool will act on it. These are per asset
+        rather than protocol-wide, because a treasury wrapper and an equity neither go stale nor move
+        at the same rate. A price outside any of them is refused, and the pool says which.
+      </P>
+      <Table
+        head={["Asset", "Maximum age", "Deviation limit", "Floor", "Ceiling"]}
+        rows={pool.assets.map(asset => [
+          <Mono key="asset">{asset.symbol ?? asset.address}</Mono>,
+          asset.maxPriceAgeSeconds ? formatDuration(asset.maxPriceAgeSeconds) : "no limit",
+          asset.maxDeviationBps ? formatBps(asset.maxDeviationBps) : "no limit",
+          asset.minPriceUsd1e18 && asset.minPriceUsd1e18 !== "0"
+            ? (formatUsd1e18(asset.minPriceUsd1e18) ?? "—")
+            : "no floor",
+          asset.maxPriceUsd1e18 && asset.maxPriceUsd1e18 !== "0"
+            ? (formatUsd1e18(asset.maxPriceUsd1e18) ?? "—")
+            : "no ceiling"
+        ])}
+      />
+
       <P>
         Read from the deployed contracts at block {snapshot.blockNumber} on {snapshot.readAt.slice(0, 10)}.
       </P>
@@ -179,8 +197,8 @@ export default function ParametersPage() {
             "Liquidity providers, out of the gain"
           ],
           [
-            <Mono key="f">maxPriceAge</Mono>,
-            "How stale a price may be before draws, collateral withdrawals and liquidations refuse to proceed. Zero disables the check.",
+            <Mono key="f">priceGuards</Mono>,
+            "Per asset: how stale a price may be, how far it may move in one step, and the band it must fall inside. A price outside any of them is refused, and priceStatus says which. Zero disables that one check.",
             "Everyone, as a safety stop"
           ]
         ]}

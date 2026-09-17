@@ -348,7 +348,20 @@ function readDeploymentFile(network) {
   if (Number(record.chainId) !== network.chainId) {
     fail(`deployments/${network.key}.json is for chain ${record.chainId}, expected ${network.chainId}`)
   }
-  return { ...record, source: `deployments/${network.key}.json` }
+  // The record carries an entry per deployed contract, each an object with its
+  // address, transaction and block. The pages want the protocol's own contracts
+  // apart from the assets a test deployment brings with it, so they are split by
+  // name: anything that is not one of the four is a token that deployment made.
+  const core = new Set(["SafixPool", "PassportRegistry", "PartnershipDesk", "SafixTimelock"])
+  const contracts = {}
+  const tokens = {}
+  for (const [name, entry] of Object.entries(record.contracts ?? {})) {
+    const address = typeof entry === "string" ? entry : entry?.address
+    if (!address) continue
+    if (core.has(name)) contracts[name] = address
+    else tokens[name] = address
+  }
+  return { ...record, contracts, tokens, source: `deployments/${network.key}.json` }
 }
 
 function readBroadcast(network) {

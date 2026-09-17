@@ -34,7 +34,8 @@ const READS = [
   "originationFeeBps",
   "redemptionFeeBps",
   "liquidationIncentiveBps",
-  "maxPriceAge",
+  "priceGuards",
+  "priceStatus",
   "passportRegistry"
 ]
 

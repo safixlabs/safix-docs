@@ -1,0 +1,46 @@
+{
+  "network": "testnet",
+  "chainId": 46630,
+  "commit": "450b71deb69c2afd7ffce6af9076c941e22ee6e6",
+  "tag": "testnet-2026-09-16",
+  "onMain": true,
+  "sourceIsDirty": false,
+  "worktreeIsDirty": false,
+  "script": "Deploy.s.sol",
+  "deployBlock": 120348593,
+  "deployedAt": "2026-09-16T11:22:33.768Z",
+  "explorer": "https://explorer.testnet.chain.robinhood.com",
+  "contracts": {
+    "SafixPool": "0x83feb836aab98eec343690209db227f1b085c283",
+    "PassportRegistry": "0xca730a1aa0441177f2d68ca1eb24724f204ae76a",
+    "PartnershipDesk": "0xd42ddd47de8d2b6a80b095f4ce5cfcfa398b76de",
+    "SafixTimelock": "0x08b3754336223acb60e3d2cd83bdcb5a73ee7b5b"
+  },
+  "superseded": [
+    {
+      "commit": "c1ed0965a2f5e87d6e68ad05e3ac256196a303c0",
+      "tag": null,
+      "deployBlock": 114962671,
+      "deployedAt": "2026-09-07T16:11:29.589Z",
+      "supersededAt": "2026-09-16T11:22:33.768Z",
+      "supersededByCommit": "450b71deb69c2afd7ffce6af9076c941e22ee6e6",
+      "contracts": {
+        "tUSDG": "0xa8807fa75b33b2a452de17fa08287659d1f5b559",
+        "tBILL": "0xe848360b1baeb68b080c7b2731095ba1c21d0ada",
+        "bNVDA": "0x06bcd9b23093480fc978f8da3168c64902f52d3e",
+        "tGOLD": "0xa5e5e369c07283fc086fb0bddee9cd8b8bbe44d0",
+        "SafixPool": "0xc7dc6ca56dddf387cf5fd6dfdf4e728a7878df38",
+        "PassportRegistry": "0xb9b15e826bf0266a8dc02d8498cdc520a52d1030",
+        "PartnershipDesk": "0x8d722ec4d48a0051b2a996e09ebf95a9dc4e5375",
+        "SafixTimelock": "0xe9d19df6a3803a19a00525e7d40862ff9693d603"
+      }
+    }
+  ],
+  "tokens": {
+    "tUSDG": "0x9e037ef20e020a7f3586c9925661e030d97cd2a3",
+    "tBILL": "0xb89a04c644f6e844ba81eddc0de2a803fa737df0",
+    "bNVDA": "0x11e7003a43182104672e39a2d4787549119cf62d",
+    "tGOLD": "0x361edbf3901366ac3e74b2ff2a0eafbdd6899479"
+  },
+  "source": "deployments/testnet.json"
+}
