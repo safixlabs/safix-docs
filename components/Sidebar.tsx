@@ -16,7 +16,10 @@ export default function Sidebar() {
       <div>
         <Link href="/" className="block">
           <span className="flex items-center gap-2.5">
-            <img src="/logo.png" alt="" className="h-7 w-7" />
+            <span
+            aria-hidden
+            className="h-7 w-7 shrink-0 bg-fog [mask-image:url(/logo.png)] [mask-position:center] [mask-repeat:no-repeat] [mask-size:contain]"
+          />
             <span className="font-sans text-[24px] font-bold leading-none tracking-[-0.01em] text-fog">Safix</span>
           </span>
           <span className="mt-2.5 block text-[12px] leading-snug tracking-[-0.02em] text-haze">

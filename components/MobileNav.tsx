@@ -14,7 +14,10 @@ export default function MobileNav() {
     <div className="sticky top-0 z-10 border-b border-line bg-carbon/80 backdrop-blur-md md:hidden">
       <div className="flex items-baseline justify-between px-6 pt-5">
         <Link href="/" className="flex items-center gap-2">
-          <img src="/logo.png" alt="" className="h-6 w-6" />
+          <span
+            aria-hidden
+            className="h-6 w-6 shrink-0 bg-fog [mask-image:url(/logo.png)] [mask-position:center] [mask-repeat:no-repeat] [mask-size:contain]"
+          />
           <span className="font-sans text-[20px] font-bold tracking-[-0.01em] text-fog">Safix</span>
         </Link>
         <div className="flex items-center gap-3">
